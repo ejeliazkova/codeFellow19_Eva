@@ -1,41 +1,53 @@
 body{
-    background-color: #C8DAEA;
-    /*font: 75% georgia, sans-serif;*/
+    background-color: rgba(242, 253, 252, .5);
+    font-family: 'Courier New', Courier, monospace;
   }
   h1{
-    color: white;
+    color: #798EA8;
     padding:1px;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 50px;
+    letter-spacing: .14em;
+    line-height: .9em;
+    text-transform: uppercase;
   }
+
   .Menu{
+      background-color: rgba(179, 233, 244, .2);
+      word-spacing: 50px;
+      margin-bottom: 50px;
       
   }
   .BlockOne{
     max-width: 100%;
     margin:auto;
-    background-color: rgba(203, 192, 212, 0.5); /*CBC0D4*/
-    padding: 10px;
+    background-color: rgba(203, 192, 212, 0.2); /*CBC0D4*/
+    padding-top: 10px;
+    padding-left: 40px;
+
   }
     .logo{
-    background: transparent url(headshot.jpeg) top left no-repeat;
-    position: absolute;
-    shape-outside: circle(50%);
-    top: 80px;
-    right: 10px;
-    width: 140px;
-    height: 270px;
-    padding: 10px;
+    background: transparent url(headshot.jpeg)no-repeat;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
   }
 
   h2{
-    color:#F2FDFC;
+    color:#798EA8;
     /*margin-left: 10px;*/
   }
   .PageWrapper{
     max-width: 100%;
     margin:auto;
-    background-color: rgba(166, 162, 186, 0.5); /*A6A2BA*/
-    padding: 10px; 
+    background-color: rgba(166, 162, 186, 0.2); /*A6A2BA*/
+    padding-top: 10px;
+    padding-left: 40px;
   }
   p{
       color: #74879F;
@@ -43,8 +55,23 @@ body{
   }
   a:link{
     color: #293340;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: .14em;
+    line-height: .9em;
+    text-transform: uppercase;
   }
   a:hover{
     color: #5F6370;
+  }
+
+  div.BlockOne{
+      display: inline-block;
+  }
+  div.PageWrapper{
+    display: inline-block;
+
   }
   
