@@ -11,8 +11,17 @@ body{
     max-width: 100%;
     margin:auto;
     background-color: rgba(203, 192, 212, 0.5); /*CBC0D4*/
+  }
+    .logo{
+    background: transparent url(headshot.jpeg) top left no-repeat;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 140px;
+    height: 270px;
     padding: 10px;
   }
+
   h2{
     color:#F2FDFC;
     /*margin-left: 10px;*/
