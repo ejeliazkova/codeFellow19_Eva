@@ -1,35 +1,57 @@
 body{
     background-color: rgba(242, 253, 252, .5);
     font-family: 'Courier New', Courier, monospace;
+    padding-left: 10px;
   }
   h1{
     color: #798EA8;
-    padding:1px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
     font-weight: 500;
     font-style: normal;
     font-size: 50px;
-    letter-spacing: .14em;
+    letter-spacing: 10px;
     line-height: .9em;
     text-transform: uppercase;
   }
   .Menu{
-      background-color: rgba(179, 233, 244, .2);
-      word-spacing: 50px;
-      text-align: center;
-      margin-bottom: 50px; 
+    background-color: rgba(179, 233, 244, .2);
+    word-spacing: 80px;
+    text-align: center;
+    margin-bottom: 50px;
+
   }
+  .dropDownMenu{
+    display: none;
+    }
+
+  @media (max-width: 600px){
+    .Menu{
+        display: none;
+    }
+    h1{
+        font-size: 30px;
+        text-align: left;
+    }
+    .dropDownMenu{
+        display: inline-block;
+        position: absolute;
+        padding-left: 5px;
+        
+    }
+    .dropDownLink{
+    }
+}
 
   .container{
-      grid-gap: 10px 10px;
+    align-items: center;
+    grid-gap: 10px 10px;
     height: 90px;
-    margin: 5px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
-  .cell {
+  .cell_one {
     color:#88B4E2;
     font-size: 50%;
     text-align: right;
@@ -42,16 +64,16 @@ body{
     padding-top: 10px;
     padding-left: 40px;
     margin-top: 50px;
-    background-size: 25.5vw;
+    /*background-size: 25.5vw;*/
 
   }
     .logo{
     background: transparent url(headshot.jpeg)no-repeat;
-    width: 150px;
+    /*width: 150px;
     height: 150px;
     position: relative;
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 50%;*/
   }
 
   h2{
@@ -67,29 +89,24 @@ body{
     margin-top: 50px;
   }
   p{
-      color: #74879F;
-      font-size: 100%;
+    color: #74879F;
+    font-size: 100%;
+    margin-left: 10px;
       
   }
   a:link{
     color: #293340;
-    font-family: 'Courier New', Courier, monospace;
     font-weight: 500;
     font-style: normal;
     font-size: 14px;
     letter-spacing: .14em;
     line-height: .9em;
     text-transform: uppercase;
+    text-underline-position: below;
   }
   a:hover{
     color: #5F6370;
+    font-size: 150%;
   }
-
-  div.BlockOne{
-      display: inline-block;
-  }
-  div.PageWrapper{
-    display: inline-block;
-
-  }
+  
   
