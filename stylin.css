@@ -1,34 +1,34 @@
 body{
-    background-color: rgba(255, 255, 255, .1);
+    background-color: rgba(244, 204, 131, .9);
     font-family: 'Courier New', Courier, monospace;
     padding-left: 10px;
 }
   h1{
-    color: #798EA8; text-align: center; font-weight: 500; font-style: normal;
+    color: #A73531; text-align: center; font-weight: 500; font-style: normal;
     font-size: 50px; letter-spacing: 10px; line-height: .9em; text-transform: uppercase;
   }
   h2{
-    color:#798EA8; margin-left: 10px; text-align: center;
+    color:white; margin-left: 10px; text-align: center;
   }
   p{
-    color: #74879F; font-size: 100%; margin-left: 10px; text-align: center;
+    color: #875E49; font-size: 100%; margin-left: 10px; text-align: center;
   }
   a, a:visited{
-    color: #293340; font-weight: 500; font-style: normal; font-size: 14px;
+    color: #3b87e9; font-weight: 500; font-style: normal; font-size: 14px;
     letter-spacing: .14em; line-height: .9em; text-transform: uppercase; text-align: center;
   }
   a:hover{
     color: #5F6370; font-size: 150%;
   }
 .Menu{
-    background-color: rgba(179, 233, 244, .2); word-spacing: 80px; text-align: center;
+    background-color: rgba(158, 179, 201, .5); word-spacing: 80px; text-align: center;
 }
 .dropMenu{display: none;}
 
 .BlockOne{
-    max-width: 100%; background-color: rgba(242, 253, 252, .5);
+    max-width: 100%; background-color: rgba(160, 179, 201, .9);
     padding-top: 10px; padding-bottom: 10px; padding-left: 40px; padding-right: 40px;
-    margin-top: 50px; margin-bottom: 25px;
+    margin-top: 50px; margin-bottom: 50px;
 }
 .parent{
     display: flex;
@@ -36,12 +36,13 @@ body{
     flex-direction: row;
     justify-content: space-around;    
     align-items: stretch;
+    margin-bottom: 50px;
 }
 
 .PageWrapper{
-    max-width: 100%; background-color: rgba(242, 253, 252, .5);
+    max-width: 100%; background-color: rgba(160, 179, 201, .9);
     padding-top: 10px; padding-bottom: 10px; padding-left: 40px; padding-right: 40px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 .logo{
@@ -89,6 +90,116 @@ body{
 
     .dropMEnu:hover .dropLink {background-color: #3e8e41;}
 
+    .parent{
+        display: flex;
+        box-flex: row wrap;
+        flex-direction: column;
+        justify-content: space-around;    
+        align-items: stretch;
+        margin-bottom: 50px;
+    }
+    .parent2{
+        display: flex;
+        box-flex: row wrap;
+        flex-direction: column;
+        justify-content: space-around;    
+        align-items: stretch;
+        margin-bottom: 50px;
+    }
+
+}
+
+.child1{
+    margin: 0;
+    background-position: center;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(arch.jpg);
+    width: 189;
+    height: 252px;
+}
+.child2{
+    margin: 0;
+    background-position: center;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(tree.jpg);
+    width: 189;
+    height: 252px;
+}
+.child3{
+    margin: 0;
+    background-position: center;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(window.jpg);
+    width: 189;
+    height: 252px;
+}
+.child4{
+    margin: 0;
+    background-position: center;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(sevenlakes.jpg);
+    width: 189;
+    height: 252px;
+}
+.child5{
+    margin: 0;
+    background-position: center;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(nesebar.jpg);
+    width: 189;
+    height: 252px;
+}
+.child6{
+    margin: 0;
+    background-position: center;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(sofia.jpg);
+    width: 189;
+    height: 252px;
+}
+.child7{
+    margin: 0;
+    background-position: center;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(idaho.jpg);
+    width: 189;
+    height: 252px;
+}
+.child8{
+    margin: 0;
+    background-position: center;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(split.jpg);
+    width: 189;
+    height: 252px;
+}
+.child9{
+    margin: 0;
+    background-position: center;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(beach.jpg);
+    width: 189;
+    height: 252px;
+}
+.parent2{
+    display: flex;
+    box-flex: row wrap;
+    flex-direction: row;
+    justify-content: space-around;    
+    align-items: stretch;
+    margin-bottom: 50px;
+}
+.parent2 p{
+    color: white;
 }
   
   
