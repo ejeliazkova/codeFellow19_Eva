@@ -23,9 +23,7 @@ body{
 .Menu{
     background-color: rgba(179, 233, 244, .2); word-spacing: 80px; text-align: center;
 }
-.dropDown{
-    display: none;
-}
+.dropMenu{display: none;}
 
 .BlockOne{
     max-width: 100%; background-color: rgba(242, 253, 252, .5);
@@ -47,15 +45,10 @@ body{
 }
 
 .logo{
-    background-image: url(headshot.jpeg);
+    background-image: url(prof.jpeg);
     width: 200px;
     height: 200px;
     position: absolute;
-    
-
-
-    
-
     overflow: hidden;
     border-radius: 50%;
 }
@@ -66,10 +59,35 @@ body{
     .navbar{
         display: none;
     }
-    .dropDown{
-        display: inline-block; position: absolute; padding-left: 5px;  
+    .dropLink{
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
     }
-    
+    .dropMenu{
+        display: inline-block; position: relative; padding-left: 5px;  
+    }
+    .dropDownContent{
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropDownContent a{
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropDownContent a:hover {background-color: #ddd;}
+
+    .dropMenu:hover .dropDownContent {display: block;}
+
+    .dropMEnu:hover .dropLink {background-color: #3e8e41;}
 
 }
   
