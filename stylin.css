@@ -27,10 +27,28 @@ body{
 
 .BlockOne{
     max-width: 100%; background-color: rgba(160, 179, 201, .9);
+    /*background-image: url(tree.jpg);*/
+
+    padding-top: 10px; padding-bottom: 10px; padding-left: 40px; padding-right: 40px;
+    margin-top: 50px; margin-bottom: 50px;
+}
+
+.BlockNone{
+    max-width: 100%; background-color: rgba(160, 179, 201, .9);
+    background-image: url(tree.jpg);
+
     padding-top: 10px; padding-bottom: 10px; padding-left: 40px; padding-right: 40px;
     margin-top: 50px; margin-bottom: 50px;
 }
 .parent{
+    display: flex;
+    box-flex: row wrap;
+    flex-direction: row;
+    justify-content: space-around;    
+    align-items: stretch;
+    margin-bottom: 50px;
+}
+.parent2{
     display: flex;
     box-flex: row wrap;
     flex-direction: row;
@@ -60,13 +78,14 @@ body{
     .navbar{
         display: none;
     }
-    .dropLink{
+    /*.dropLink{
         background-color: #4CAF50;
         color: white;
         padding: 16px;
         font-size: 16px;
         border: none;
-    }
+    }*/
+
     .dropMenu{
         display: inline-block; position: relative; padding-left: 5px;  
     }
@@ -74,7 +93,7 @@ body{
         display: none;
         position: absolute;
         background-color: #f1f1f1;
-        min-width: 160px;
+        min-width: 100px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
     }
@@ -88,7 +107,6 @@ body{
 
     .dropMenu:hover .dropDownContent {display: block;}
 
-    .dropMEnu:hover .dropLink {background-color: #3e8e41;}
 
     .parent{
         display: flex;
@@ -199,7 +217,7 @@ body{
     margin-bottom: 50px;
 }
 .parent2 p{
-    color: white;
+    color:white;
 }
   
   
