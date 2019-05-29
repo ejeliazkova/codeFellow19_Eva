@@ -1,13 +1,12 @@
 <html>
 
-<head>
-    <title>My Projects</title>
-    <link rel="stylesheet" type="text/css" href="stylin.css">
-
-</head>
 
 <body>
     <h1>My Projects</h1>
+    <?php
+        include('config/init.php');
+        echoHeader($pageTitle);
+    ?>
     <h2>LACRM</h2>
     <p>Less Annoying CRM summer '19 coding fellowship</p>
     <h2>BioSURF</h2>

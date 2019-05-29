@@ -1,13 +1,13 @@
 <html>
 
-<head>
-    <title>About Me</title>
-    <link rel="stylesheet" type="text/css" href="stylin.css">
 
-</head>
 
 <body>
     <h1>Who is she</h1>
+    <?php
+        include('config/init.php');
+        echoHeader($pageTitle, $h1);
+    ?>
     <div class= 'BlockOne'>  
     <h2>Basics</h2>
     <p>Hi :) My name is Eva and I'm a St. Louis native. I'm double majoring in Cognitive Neuroscience

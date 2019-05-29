@@ -1,13 +1,11 @@
 <html>
 
-<head>
-    <title>This is the title of the post</title>
-    <link rel="stylesheet" type="text/css" href="stylin.css">
-
-</head>
-
 <body>
     <h1>The world through my eyes</h1>
+    <?php
+        include('config/init.php');
+        echoHeader($pageTitle, $h1);
+    ?>
     <div class='BlockOne'>
         <div class="parent2">
             <div class="child1">

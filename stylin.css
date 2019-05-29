@@ -1,42 +1,39 @@
 body{
-    background-color: rgba(244, 204, 131, .9);
+    background-color: black;
     font-family: 'Courier New', Courier, monospace;
     padding-left: 10px;
 }
-  h1{
-    color: #A73531; text-align: center; font-weight: 500; font-style: normal;
+h1{
+    color: #B12B2C; text-align: center; font-weight: 500; font-style: normal;
     font-size: 50px; letter-spacing: 10px; line-height: .9em; text-transform: uppercase;
   }
   h2{
-    color:white; margin-left: 10px; text-align: center;
+    color:#6294B2
+    ; margin-left: 10px; text-align: center;
   }
   p{
-    color: #875E49; font-size: 100%; margin-left: 10px; text-align: center;
+    color: #1a4718; font-size: 100%; margin-left: 10px; text-align: center;
   }
   a, a:visited{
-    color: #3b87e9; font-weight: 500; font-style: normal; font-size: 14px;
+    color: #B12B2C; font-weight: 500; font-style: normal; font-size: 14px;
     letter-spacing: .14em; line-height: .9em; text-transform: uppercase; text-align: center;
   }
   a:hover{
-    color: #5F6370; font-size: 150%;
+    color: white; font-size: 150%;
   }
 .Menu{
-    background-color: rgba(158, 179, 201, .5); word-spacing: 80px; text-align: center;
+    background-color: #F0C67E; word-spacing: 80px; text-align: center;
 }
 .dropMenu{display: none;}
 
 .BlockOne{
-    max-width: 100%; background-color: rgba(160, 179, 201, .9);
-    /*background-image: url(tree.jpg);*/
-
+    max-width: 100%; background-color: rgba(160, 179, 201, .2);
     padding-top: 10px; padding-bottom: 10px; padding-left: 40px; padding-right: 40px;
     margin-top: 50px; margin-bottom: 50px;
 }
 
 .BlockNone{
-    max-width: 100%; background-color: rgba(160, 179, 201, .9);
-    background-image: url(tree.jpg);
-
+    max-width: 100%;  background-color: rgba(160, 179, 201, .2);
     padding-top: 10px; padding-bottom: 10px; padding-left: 40px; padding-right: 40px;
     margin-top: 50px; margin-bottom: 50px;
 }
@@ -58,7 +55,7 @@ body{
 }
 
 .PageWrapper{
-    max-width: 100%; background-color: rgba(160, 179, 201, .9);
+    max-width: 100%; background-color: rgba(160, 179, 201, .2);
     padding-top: 10px; padding-bottom: 10px; padding-left: 40px; padding-right: 40px;
     margin-bottom: 50px;
 }
@@ -216,8 +213,9 @@ body{
     align-items: stretch;
     margin-bottom: 50px;
 }
-.parent2 p{
-    color:white;
-}
+/*.parent2 p{
+    color:#F0C67E
+    ;
+}*/
   
   
