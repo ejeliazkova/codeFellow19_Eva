@@ -7,6 +7,10 @@
         include('config/init.php');
         echoHeader('Projects', 'My projects');
     ?>
+    <?php
+        include('config/init.php');
+        echoHeader('Projects', 'My projects');
+    ?>
     
     <div class='BlockNone'>
         <div class="projectParent">
