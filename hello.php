@@ -1,14 +1,12 @@
 <html>
 
-
 <body>
-    <h1>Eva Jeliazkova</h1>
     <?php
         include('config/init.php');
-        echoHeader($pageTitle, $h1);
+        echoHeader('Welcome', 'Eva Jeliazkova');
     ?>
     <div class='BlockNone'>
-        <div class="parent">
+        <div class="homeParent">
             <div class="child_1">
                 <h2>Subtitle</h2>
                 <p>Maybe I can have a picture here or some icons that represent me/what I value?

@@ -1,18 +1,18 @@
 <html>
 
 <body>
-    <h1>The world through my eyes</h1>
+
     <?php
         include('config/init.php');
-        echoHeader($pageTitle, $h1);
+        echoHeader('Travel', 'The world through my eyes');
     ?>
     <div class='BlockOne'>
-        <div class="parent2">
-            <div class="child1">
+        <div class="travelParent">
+            <div class="child_1">
                 <p>Art Gallery Dubrovnik</p>
             </div>
-            <div class="child2"><p>Old Town Dubrovnik</p></div>
-            <div class="child3"><p>The Walls of Dubrovnik</p></div>
+            <div class="child_2"><p>Old Town Dubrovnik</p></div>
+            <div class="child_3"><p>The Walls of Dubrovnik</p></div>
         </div>
 
 

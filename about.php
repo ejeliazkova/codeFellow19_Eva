@@ -1,12 +1,9 @@
 <html>
 
-
-
 <body>
-    <h1>Who is she</h1>
     <?php
         include('config/init.php');
-        echoHeader($pageTitle, $h1);
+        echoHeader('About me', 'Who is she');
     ?>
     <div class= 'BlockOne'>  
     <h2>Basics</h2>

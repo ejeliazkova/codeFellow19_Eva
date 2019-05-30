@@ -1,5 +1,5 @@
 <?php
-    function echoHeader($pageTitle){
+    function echoHeader($pageTitle, $h1){
         echo "
             <html>
                 <head>
@@ -7,6 +7,7 @@
                     <link rel='stylesheet' type='text/css' href='stylin.css'>
                 </head>
                 <body>
+                    <h1>".$h1."</h1>
                     <div class='Menu'>
                         <div class='navbar'>
                             <a href='hello.php'>Home</a>
@@ -21,6 +22,7 @@
                     <div class='dropMenu'>
                         <a href= 'dropLink'>Menu</a>
                             <div class='dropDownContent'>
+                                <a href='hello.php'>Home</a>
                                 <a href='about.php'>About</a>
                                 <a href='projects.php'>Projects</a>
                                 <a href='travel.php'>Travel</a>
