@@ -4,21 +4,30 @@ body{
     padding-left: 10px;
 }
     h1{
-        color: #B12B2C; text-align: center; font-weight: 500; font-style: normal;
+        color: #6e8898; text-align: center; font-weight: 500; font-style: normal;
         font-size: 50px; letter-spacing: 10px; line-height: .9em; text-transform: uppercase;
     }
 
     h2{
-        color:#6294B2; margin-left: 10px; text-align: center;
+        color:rgb(250, 216, 174)/*#668477 #6e8898*/; margin: 20px; text-align: center; font-weight: 100;
+    }
+    .homeyPic.jpg{
+        /*margin: 0;
+        background-position: center;
+        overflow: hidden;*/
+        
+        /*background-image: url(homeyPic.jpg);*/
+        width: fit-content;
+        
     }
     
     p{
-        color: #1a4718; font-size: 100%; margin-left: 10px; text-align: center;
+        color: #F5F3E4; /*#6b5e62;*/ font-size: 100%; margin-left: 10px; text-align: center;
     }
     .travelParent p{ color: white; position: relative; margin-bottom: 1px;}
     
     a, a:visited{
-        color: #B12B2C; font-weight: 500; font-style: normal; font-size: 14px;
+        color: #50413a; font-weight: 500; font-style: normal; font-size: 14px;
         letter-spacing: .14em; line-height: .9em; text-transform: uppercase; text-align: center;
     }
     a:hover{color: white; font-size: 150%;}
@@ -26,11 +35,12 @@ body{
     .dropMenu a:hover{color:black;}
 
     
-    .Menu{background-color: #F0C67E; word-spacing: 80px; text-align: center;}
+    .Menu{background-color: #F1C389;; word-spacing: 80px; text-align: center;}
     .dropMenu{display: none;}
+
 /* make the background color of all divs the same*/
     .BlockOne, .BlockNone, .PageWrapper{
-        max-width: 100%; background-color: rgba(160, 179, 201, .2);
+        max-width: 100%; background-color:rgba(209, 121, 79, 0.9);/*rgba(201, 240, 255, .5);*/
         padding-top: 10px; padding-bottom: 10px; padding-left: 40px; padding-right: 40px;
         margin-top: 50px; margin-bottom: 50px;
     }
@@ -39,9 +49,9 @@ body{
         display: flex;
         flex-direction: row;
         box-flex: row wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: stretch;
-        scroll-margin-bottom: 50px;
+        margin: 20px;
     }
 
     .logo{
@@ -49,7 +59,7 @@ body{
     }
 /* Once the screen is smaller than 600px, make the header smaller, the navbar into a dropdown,
     and change the flex-direction to columns rather than rows */
-@media (max-width: 600px){
+@media (max-width: 800px){
     h1{
         font-size: 30px;text-align: left;
     }
@@ -83,10 +93,27 @@ body{
         flex-direction: column;
         justify-content: space-around;    
         align-items: stretch;
-        margin-bottom: 50px;
+        margin: 20px;
+        
+    }
+    .homeParent .child_1{
+        background: rgba(192, 147, 103, 0.5);
+    }
+    .homeParent .child_2{
+        background: rgba(190, 138, 85, 0.5);
+    }
+    .homeParent .child_3{
+        background: rgba(190, 128, 65, 0.5);
+    }
+
+    .aboutParent .child_1{
+        background: rgba(190, 138, 85, 0.5);
     }
 
 }
+
+/*The children of the 'Home Page' parent*/
+
 /*The children of the 'Projects Page' parent*/
 .child_1 .companyLogo {
     margin: 0;

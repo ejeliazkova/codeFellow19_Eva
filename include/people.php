@@ -1,10 +1,9 @@
 <?php
-
-
+/*
 //get the id of the blog post in the array of Blog Posts
 function getProfile($profileId){
     
-    $allProfiles = getAllProfiles();
+    $allProfiles = getAllProfiles();                     //it says ALLPROFILES is undefined******* 
     
     return $allProfiles[$profileId];
 }
@@ -44,6 +43,6 @@ function getAllProfiles(){
             'school' => "WashU"
         ]
     ];
-
-    return $allProfiles;
 }
+    return $allProfiles;
+*/

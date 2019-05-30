@@ -5,31 +5,27 @@
         include('config/init.php');
         echoHeader('Welcome', 'Eva Jeliazkova');
     ?>
+    <img src= 'homeyPic.jpg'><img>
+
     <div class='BlockNone'>
         <div class="homeParent">
             <div class="child_1">
-                <h2>Subtitle</h2>
-                <p>Maybe I can have a picture here or some icons that represent me/what I value?
-                    or if I have anything else to say at all blah blah blah blah blah blah blah
-                    more and more and more but what if i Keep writing will I have room in the div
-                    to show the entire text or will I potentially have an issue I need to resolve
-                    again
+                <h2>Skills</h2>
+                <p>HTML <br> CSS <br> JAVA
                 </p>
             </div>
             <div class="child_2">
-                <h2>Subtitle</h2>
-                <p>Maybe I can have a picture here or some icons that represent me/what I value?
-                        or if I have anything else to say at all blah blah blah blah blah blah blah
-                        
+                <h2>Clubs</h2>
+                <p>Reflections <br>
+                    Russian Club <br>
+                    Chi Omega <br>
                 </p>
             </div>
             <div class="child_3">
-                <h2>Subtitle</h2>
-                <p>Maybe I can have a picture here or some icons that represent me/what I value?
-                        or if I have anything else to say at all blah blah blah blah blah blah blah
-                        more and more and more but what if i Keep writing will I have room in the div
-                        to show the entire text or will I potentially have an issue I need to resolve
-                        again
+                <h2>Languages</h2>
+                <p>English <br>
+                    Bulgarian <br>
+                    Spanish
                 </p>
             </div>
         </div>
