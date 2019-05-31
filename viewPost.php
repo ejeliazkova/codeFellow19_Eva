@@ -1,15 +1,12 @@
  <?php
     include('config/init.php');
+
+    $result = getAllProfiles();
+    var_dump($result);
+
+
+   $profile = getProfile();
     
-    //$blogPostId = $_REQUEST['blogPostId'];
-    //$blogPost = getBlogPost($blogPostId);
-    $profileId = 1;
-    $profile = getProfile(4);
-    
-    echoHeader('Title', 'the first header');
-    echo "
-        <h1>".$profile['name']."</h1>
-        ...
-    ";
+   echoHeader("_".$profile['name'], 'the first profile page');
  
 ?> 

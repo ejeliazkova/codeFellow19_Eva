@@ -5,9 +5,10 @@
         include('config/init.php');
         echoHeader('Welcome', 'Eva Jeliazkova');
     ?>
-    <div class= 'homePic'><div> 
 
-    <div class='BlockNone'>
+<img src= 'homePic.jpg' class= 'responsiveImage'/>
+
+    <div class='pageWrapper1'>
         <div class="homeParent">
             <div class="child_1">
                 <h2>Skills</h2>
@@ -32,14 +33,14 @@
         
     </div>
 
-    <div class='PageWrapper'>
-        
+    <div class='pageWrapper2'>
+       <div class= 'homeParent'> 
         <h2>Some thoughts on some specific things</h2>
         <p>College is almost over and, for me, that means it's time to stress about post-grad lyfe.</p>
         <a class='funLink' href="babySteps.html">Post Grad Action Steps</a>
         <p>Fortunately, I've also had time to explore some specific interests...</p>
         <a class='funLink' href="art.html">Mexican Art</a>
-
+        </div>
     </div>
 
     <div class='AnothaOne'>

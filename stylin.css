@@ -9,33 +9,54 @@ body{
     }
 
     h2{
-        color:rgb(250, 216, 174)/*#668477 #6e8898*/; margin: 20px; text-align: center; font-weight: 100;
+        color:rgb(250, 216, 174); margin: 20px; text-align: center; font-weight: 100;
     }
-
     
     p{
-        color: #F5F3E4; /*#6b5e62;*/ font-size: 100%; margin-left: 10px; text-align: center;
+        color: #F5F3E4; font-size: 100%; margin-left: 10px; text-align: center;
     }
-    .travelParent p{ color: white; position: relative; margin-bottom: 1px;}
+    .travelParent p{
+        color: white; position: relative; margin-bottom: 1px;
+    }
     
     a, a:visited{
         color: #50413a; font-weight: 500; font-style: normal; font-size: 14px;
         letter-spacing: .14em; line-height: .9em; text-transform: uppercase; text-align: center;
     }
-    a:hover{color: white; font-size: 150%;}
-    .PageWrapper a:hover{ color: black;font-size: 150%;}
-    .dropMenu a:hover{color:black;}
+
+    a:hover{
+        color: white; font-size: 150%;
+    }
+
+    .pageWrapper2 a:hover{ 
+        color: black;font-size: 150%;
+    }
+
+    .dropMenu a:hover{
+        color:black;
+    }
 
     
-    .Menu{background-color: #F1C389;; word-spacing: 80px; text-align: center;}
-    .dropMenu{display: none;}
+    .Menu{
+        background-color: #F1C389;; word-spacing: 80px; text-align: center;
+    }
 
+    .dropMenu{
+        display: none;
+    }
+
+    .responsiveImage{
+        width: 100%;
+        height: auto;
+    }
 /* make the background color of all divs the same*/
-    .BlockOne, .BlockNone, .PageWrapper{
-        max-width: 100%; background-color:rgba(209, 121, 79, 0.9);/*rgba(201, 240, 255, .5);*/
+    .BlockOne, .pageWrapper1, .pageWrapper2{
+        max-width: 100%; background-color:rgba(209, 121, 79, 0.9);
         padding-top: 10px; padding-bottom: 10px; padding-left: 40px; padding-right: 40px;
         margin-top: 50px; margin-bottom: 50px;
     }
+    
+    
 /* define the flex-direction property for the container on each page*/
     .homeParent, .projectParent, .travelParent{
         display: flex;
@@ -98,13 +119,13 @@ body{
         background: rgba(190, 128, 65, 0.5);
     }
 
+
     .aboutParent .child_1{
         background: rgba(190, 138, 85, 0.5);
     }
 
 }
 
-/*The children of the 'Home Page' parent*/
 
 /*The children of the 'Projects Page' parent*/
 .child_1 .companyLogo {
