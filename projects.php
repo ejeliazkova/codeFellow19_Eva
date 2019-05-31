@@ -1,8 +1,5 @@
 <html>
-
-
 <body>
-
     <?php
         include('config/init.php');
         echoHeader('Projects', 'My projects');
@@ -31,12 +28,15 @@
 
         </div>
     </div>
+    
+    
     <?php
         $profiles = getAllProfiles();
         echo "
             <h3>Check out all these people</h3>
-            ";                                                    //something wrong with $profiles or $profile b/c
-        foreach($profiles as $profile){                           //apparently the args in FOREACH are invalid 
+            ";       
+ 
+        foreach($profiles as $profile){ 
             echo "<a href='/viewPost.php?profileId=".$profile['profileId']."'>
                 ".$profile['name']."
             </a><br />";

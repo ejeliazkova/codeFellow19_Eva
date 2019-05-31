@@ -11,16 +11,7 @@ body{
     h2{
         color:rgb(250, 216, 174)/*#668477 #6e8898*/; margin: 20px; text-align: center; font-weight: 100;
     }
-    .homeyPic.jpg{
-        /*margin: 0;
-        background-position: center;
-        overflow: hidden;*/
-        
-        /*background-image: url(homeyPic.jpg);*/
-        width: fit-content;
-        
-        
-    }
+
     
     p{
         color: #F5F3E4; /*#6b5e62;*/ font-size: 100%; margin-left: 10px; text-align: center;

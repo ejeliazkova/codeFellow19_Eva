@@ -5,7 +5,7 @@
         include('config/init.php');
         echoHeader('Welcome', 'Eva Jeliazkova');
     ?>
-    <img src= 'homeyPic.jpg'><img> 
+    <div class= 'homePic'><div> 
 
     <div class='BlockNone'>
         <div class="homeParent">
