@@ -15,7 +15,7 @@
                 <h2>LACRM</h2>
                 <p>Less Annoying CRM Summer '19 Coding<br> Fellowship Program in St. Louis, MO</p>
                 
-                <a href="fellowship.php">
+                <a href="fellowship.php"> 
                     <div class="companyLogo" alt="HTML tutorial"></div>
                 </a>
             </div>

@@ -44,5 +44,5 @@ function getAllProfiles(){
         ]
     ];
 }
-    return $allProfiles;
+    return $allProfiles; 
 */

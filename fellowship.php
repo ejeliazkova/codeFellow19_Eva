@@ -2,7 +2,7 @@
 
 <body>
     <?php
-        include('config/init.php');
+        include('config/init.php'); 
         echoHeader('Comps', 'My Big Project');
         getProfile(2);
     ?>

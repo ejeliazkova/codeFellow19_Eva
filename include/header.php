@@ -1,6 +1,6 @@
 <?php
 
-    function echoHeader($pageTitle, $h1){
+    function echoHeader($pageTitle, $h1){ 
         echo "
             <html>
                 <head>
