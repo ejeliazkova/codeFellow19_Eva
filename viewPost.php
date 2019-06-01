@@ -2,11 +2,11 @@
     include('config/init.php');
 
     $result = getAllProfiles();
-    var_dump($result);
+    //var_dump($result);
 
 
-   $profile = getProfile();
+   $profile = getProfile($_GET["profileId"]);
     
-   echoHeader("_".$profile['name'], 'the first profile page');
+   echoHeader("".$profile['name'], "".$profile['occupation']);
  
 ?> 

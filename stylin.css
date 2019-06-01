@@ -25,15 +25,14 @@ body{
     }
 
     a:hover{
+        color:black; font-size: 150%;
+    }
+    .Menu a:hover{
         color: white; font-size: 150%;
     }
 
-    .pageWrapper2 a:hover{ 
-        color: black;font-size: 150%;
-    }
-
-    .dropMenu a:hover{
-        color:black;
+    .dropMenu a:hover{ 
+        color: black; font-size: 14px;
     }
 
     
@@ -41,6 +40,12 @@ body{
         background-color: #F1C389;; word-spacing: 80px; text-align: center;
     }
 
+    .pageWrapper1 .child_1:hover, .child_2:hover, .child_3:hover{
+        font-size: 150%;
+    }
+    .pageWrapper3 a:hover{
+        color: black; font-size: 150%;
+    }
     .dropMenu{
         display: none;
     }
