@@ -25,6 +25,7 @@
     </div>
     
     <?php
+
         $profiles = getAllProfiles();
         echo "
             <h3>Check out all these people</h3>

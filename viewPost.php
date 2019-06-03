@@ -8,5 +8,5 @@
    $profile = getProfile($_GET["profileId"]);
     
    echoHeader("".$profile['name'], "".$profile['occupation']);
- 
 ?> 
+
