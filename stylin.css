@@ -15,6 +15,10 @@ body{
     p{
         color: #F5F3E4; font-size: 100%; margin-left: 10px; text-align: center;
     }
+    .login p{
+        color: #6e8898;
+        text-align: left;
+    }
     .travelParent p{
         color: white; position: relative; margin-bottom: 1px;
     }
@@ -40,12 +44,6 @@ body{
         background-color: #F1C389;; word-spacing: 80px; text-align: center;
     }
 
-    .pageWrapper1 .child_1:hover, .child_2:hover, .child_3:hover{
-        font-size: 150%;
-    }
-    .pageWrapper3 a:hover{
-        color: black; font-size: 150%;
-    }
     .dropMenu{
         display: none;
     }
