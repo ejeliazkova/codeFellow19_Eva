@@ -60,8 +60,16 @@ function echoHeader(){
                     <br/>
                     <br/><br/>
                     <input type='submit' name='newItem' value='Add to list' />
-                </form>";
-
+                </form>
+            </div>
+            
+            <div class= 'childB'>
+                <h2>My List<h2>
+            </div>
+        </div>
+    </body>
+                
+    ";
 }
 
 
