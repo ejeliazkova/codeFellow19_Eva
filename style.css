@@ -19,6 +19,9 @@ h1{
 .childA{
     color: black;
 }
+.childA a{
+    color: aquamarine;
+}
 .childB{
     color: black;
 

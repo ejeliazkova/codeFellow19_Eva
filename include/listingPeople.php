@@ -1,31 +1,19 @@
 <?php
 
-// #1: INSERT NEW
-function insertPeople($name, $about){
-    dbQuery(
-        'INSERT INTO people(name, about)
-        VALUES(:name, :about)',
-        [
-        'name' => $_REQUEST['name'],
-        'about' => $_REQUEST['about']
-        ]
-    );
-}
-
-//#2: GET one item
-function getPerson($peopleId){
+//#2: GET one person
+function getPerson($personId){
     $result = dbQuery('
         SELECT *
         FROM people
-        WHERE peopleId = :peopleId',
+        WHERE personId = :personId',
 
-        ['peopleId' => $peopleId]
+        ['personId' => $personId]
     ) -> fetch();
 
     return $result;
 }
 
-//#3: GET all items
+//#3: GET all people
 function getAllPeople(){
     $result = dbQuery('
         SELECT*
@@ -34,6 +22,37 @@ function getAllPeople(){
 
     return $result;
 }
+
+//#4: GET specific jobs
+//function getJobs(){
+//    $result = dbQuery('
+//    SELECT jobId *
+//    FROM people prsn
+//    INNER JOIN jobs jobId
+//    ON prsn.personId = jobId.personId
+//    WHERE personId = 1;
+
+//    ') -> fetch();
+
+//    return $result;
+//}
+
+// #1: INSERT NEW
+function insertPerson($name, $about, $user, $pass){
+    
+    dbQuery(
+        'INSERT INTO people(name, about, user, pass)
+        VALUES(:name, :about, :user, :pass)',
+        [
+        'name' => $_REQUEST['name'],
+        'about' => $_REQUEST['about'],
+        'user' => $_REQUEST['user'],
+        'pass' => $_REQUEST['pass']
+        ]
+    );
+}
+
+
 
 function echoHeader(){
     echo"
@@ -59,7 +78,33 @@ function echoHeader(){
     ";
 }
 
+function echoTaskManager($people){
+    echo" 
+    <head>
+            <link rel='stylesheet' type='text/css' href='style.css'>
+            <title> Task manager</title>
+        </head>
+    <body>
+    
+        <h1>Tasks</h1>
+        <div class= 'parent1'>
+            <div class= 'childA'>
+                <h2>".$people['name']."</h2>
+                <p>".$people['about']."</p>
+            </div>
+            
+            <div class= 'childB'>
+                <h2>Jobs<h2>
+                <p>['company''position']</p>
 
+                <p>['company''position']</p>
+
+            </div>
+        </div>
+    </body>
+    
+    ";
+}
 
 
 ?>
