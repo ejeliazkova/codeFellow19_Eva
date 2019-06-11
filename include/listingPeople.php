@@ -23,19 +23,13 @@ function getAllPeople(){
     return $result;
 }
 
-//#4: GET specific jobs
-//function getJobs(){
-//    $result = dbQuery('
-//    SELECT jobId *
-//    FROM people prsn
-//    INNER JOIN jobs jobId
-//    ON prsn.personId = jobId.personId
-//    WHERE personId = 1;
-
-//    ') -> fetch();
-
-//    return $result;
-//}
+#4: GET specific jobs
+function getSpecificJobs($personId, $jobId){
+    $result = dbQuery('
+    SELECT personId *
+    FROM people
+    INNER JOIN jobId ON people.personId = jobs.jobId');
+}
 
 // #1: INSERT NEW
 function insertPerson($name, $about, $user, $pass){
@@ -93,6 +87,19 @@ function echoTaskManager($people){
                 <p>".$people['about']."</p>
             </div>
             
+            
+        </div>
+    </body>
+    
+    ";
+}
+
+function echoJobManager($jobs){
+    echo" 
+
+    <body>
+
+        <div class= 'parent1'>
             <div class= 'childB'>
                 <h2>Jobs<h2>
                 <p>['company''position']</p>

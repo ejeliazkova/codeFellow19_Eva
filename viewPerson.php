@@ -3,8 +3,11 @@
     $result = getAllPeople();
     
     $person = getPerson($_GET['personId']);
-    //$job = getSpecificJobs($_GET[])
+    
    echoTaskManager($person);
+
+   $jobs = getSpecificJobs($_GET['jobId']);
+   echoJobManager($jobs);
 
    
 
