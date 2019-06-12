@@ -1,13 +1,13 @@
 <?php
 
 //#2: GET one person
-function getPerson($personId){
+function getPerson($id){
     $result = dbQuery('
         SELECT *
         FROM people
-        WHERE personId = :personId',
+        WHERE id = :id',
 
-        ['personId' => $personId]
+        ['id' => $id]
     ) -> fetch();
 
     return $result;
@@ -16,20 +16,25 @@ function getPerson($personId){
 //#3: GET all people
 function getAllPeople(){
     $result = dbQuery('
-        SELECT*
+        SELECT *
         FROM people'
+
     ) -> fetchAll();
 
     return $result;
 }
 
-#4: GET specific jobs
-function getSpecificJobs($personId, $jobId){
-    $result = dbQuery('
-    SELECT personId *
-    FROM people
-    INNER JOIN jobId ON people.personId = jobs.jobId');
-}
+//#4: GET specific jobs
+    function getSpecificJobs(){
+        $result = dbQuery('
+            SELECT people.id, people.name, jobs.jobId, jobs.personId, jobs.company, jobs.position
+            FROM people, jobs
+            WHERE people.id = jobs.peopleId
+            ORDER BY people.id'
+        ) -> fetchAll();
+    
+        return $result;
+    }
 
 // #1: INSERT NEW
 function insertPerson($name, $about, $user, $pass){
@@ -94,24 +99,24 @@ function echoTaskManager($people){
     ";
 }
 
-function echoJobManager($jobs){
-    echo" 
-
-    <body>
-
-        <div class= 'parent1'>
-            <div class= 'childB'>
-                <h2>Jobs<h2>
-                <p>['company''position']</p>
-
-                <p>['company''position']</p>
-
-            </div>
-        </div>
-    </body>
+//function echoJobManager($jobs){
+  //  echo" 
+//
+  //  <body>
+//
+  //      <div class= 'parent1'>
+    //        <div class= 'childB'>
+      //          <h2>Jobs<h2>
+        //        <p>['company''position']</p>
+//
+  //              <p>['company''position']</p>
+//
+  //          </div>
+    //    </div>
+   // </body>
     
-    ";
-}
+    //";/
+//}
 
 
 ?>

@@ -7,7 +7,7 @@
     $people = getAllPeople();
                 
     foreach($people as $person){
-        echo "<a href='/viewPerson.php?personId=".$person['personId']."'>
+        echo "<a href='/viewPerson.php?id=".$person['id']."'>
             ".$person['name']."
         </a><br /><br />"; 
     }
