@@ -1,13 +1,17 @@
 <?php
-    include('config/init.php');
-    $result = getAllPeople();
-    
-    $person = getPerson($_GET['id']);
-    
-   echoTaskManager($person);
+include('config/init.php');
 
-   //$jobs = getSpecificJobs($_GET['jobId']);
-   //echoJobManager($jobs);
+echo "<a href='/people.php'> Go Back </a> <br /> <br />";
+
+$person = getPerson($_GET['personId']);
+
+$theJob = getSpecificJobs($person['personId']);
+
+echoTaskManager($person);
+ 
+foreach($theJob as $oneJob){
+    echo"these are my options:" .$oneJob['company']." as a ".$oneJob['position'];
+}
 
    
 

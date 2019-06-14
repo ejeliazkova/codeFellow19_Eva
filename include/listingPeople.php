@@ -1,19 +1,16 @@
 <?php
 
-//#2: GET one person
-function getPerson($id){
+// PEOPLE
+function getPerson($personId){
     $result = dbQuery('
         SELECT *
         FROM people
-        WHERE id = :id',
-
-        ['id' => $id]
+        WHERE personId = :personId',
+        array('personId' => $personId)
     ) -> fetch();
 
     return $result;
 }
-
-//#3: GET all people
 function getAllPeople(){
     $result = dbQuery('
         SELECT *
@@ -24,17 +21,26 @@ function getAllPeople(){
     return $result;
 }
 
-//#4: GET specific jobs
-    function getSpecificJobs(){
-        $result = dbQuery('
-            SELECT people.id, people.name, jobs.jobId, jobs.personId, jobs.company, jobs.position
-            FROM people, jobs
-            WHERE people.id = jobs.peopleId
-            ORDER BY people.id'
-        ) -> fetchAll();
-    
+// JOBS
+function getJob($jobId){
+    $result = dbQuery('
+        SELECT *
+        FROM jobs
+        WHERE jobId = :jobId',
+        array('jobId' => $jobId)
+    ) -> fetch();
+
+    return $result;
+}
+function getSpecificJobs($personId){
+    $result = dbQuery('
+        SELECT *
+        FROM jobs
+        WHERE personId = :personId',
+        array('personId' => $personId)
+    ) -> fetchAll();
         return $result;
-    }
+}
 
 // #1: INSERT NEW
 function insertPerson($name, $about, $user, $pass){
@@ -50,7 +56,6 @@ function insertPerson($name, $about, $user, $pass){
         ]
     );
 }
-
 
 
 function echoHeader(){
@@ -117,6 +122,3 @@ function echoTaskManager($people){
     
     //";/
 //}
-
-
-?>
