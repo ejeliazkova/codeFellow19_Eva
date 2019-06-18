@@ -4,44 +4,68 @@ body{
     padding-left: 10px;
 }
     h1{
-        color: #6e8898; text-align: center; font-weight: 500; font-style: normal;
-        font-size: 50px; letter-spacing: 10px; line-height: .9em; text-transform: uppercase;
+        color: #6e8898;
+        text-align: center;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 50px;
+        letter-spacing: 10px;
+        line-height: .9em;
+        text-transform: uppercase;
     }
 
     h2{
-        color:rgb(250, 216, 174); margin: 20px; text-align: center; font-weight: 100;
+        color:rgb(250, 216, 174);
+        margin: 20px; text-align: center;
+        font-weight: 100;
     }
     
     p{
-        color: #F5F3E4; font-size: 100%; margin-left: 10px; text-align: center;
+        color: #F5F3E4;
+        font-size: 100%;
+        margin-left: 10px;
+        text-align: center;
     }
     .login p{
         color: #6e8898;
         text-align: left;
     }
     .travelParent p{
-        color: white; position: relative; margin-bottom: 1px;
+        color: white;
+        position: relative;
+        margin-bottom: 1px;
     }
     
     a, a:visited{
-        color: #50413a; font-weight: 500; font-style: normal; font-size: 14px;
-        letter-spacing: .14em; line-height: .9em; text-transform: uppercase; text-align: center;
+        color: #50413a;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 14px;
+        letter-spacing: .14em;
+        line-height: .9em;
+        text-transform: uppercase;
+        text-align: center;
     }
 
     a:hover{
-        color:black; font-size: 150%;
+        color:black;
+        font-size: 150%;
     }
     .Menu a:hover{
-        color: white; font-size: 150%;
+        color: white;
+        font-size: 150%;
     }
 
     .dropMenu a:hover{ 
-        color: black; font-size: 14px;
+        color: black;
+        font-size: 14px;
     }
 
     
     .Menu{
-        background-color: #F1C389;; word-spacing: 80px; text-align: center;
+        background-color: #F1C389;
+        word-spacing: 80px;
+        text-align: center;
     }
 
     .dropMenu{
@@ -54,9 +78,14 @@ body{
     }
 /* make the background color of all divs the same*/
     .BlockOne, .pageWrapper1, .pageWrapper2{
-        max-width: 100%; background-color:rgba(209, 121, 79, 0.9);
-        padding-top: 10px; padding-bottom: 10px; padding-left: 40px; padding-right: 40px;
-        margin-top: 50px; margin-bottom: 50px;
+        max-width: 100%;
+        background-color:rgba(209, 121, 79, 0.9);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
     
     
@@ -71,19 +100,27 @@ body{
     }
 
     .logo{
-        background-image: url(prof.jpeg); width: 200px; height: 200px; position: absolute; overflow: hidden; border-radius: 50%;
+        background-image: url(prof.jpeg);
+        width: 200px; height: 200px;
+        float: left;
+        overflow: hidden;
+        border-radius: 50%;
     }
-/* Once the screen is smaller than 600px, make the header smaller, the navbar into a dropdown,
+
+/* Once the screen is smaller than 800px, make the header smaller, the navbar into a dropdown,
     and change the flex-direction to columns rather than rows */
 @media (max-width: 800px){
     h1{
-        font-size: 30px;text-align: left;
+        font-size: 30px;
+        text-align: left;
     }
     .navbar{
         display: none;
     }
     .dropMenu{
-        display: inline-block; position: relative; padding-left: 5px;  
+        display: inline-block;
+        position: relative;
+        padding-left: 5px;  
     }
     .dropDownContent{
         display: none;
@@ -131,7 +168,7 @@ body{
 
 
 /*The children of the 'Projects Page' parent*/
-.child_1 .companyLogo {
+.child_2 .companyLogo {
     margin: 0;
     background-position: center;
     overflow: hidden;
@@ -140,7 +177,7 @@ body{
     width: 50px;
     height: 50px;
 }
-.child_2 .companyLogo{
+.child_1 .companyLogo{
     margin: 0;
     background-position: center;
     overflow: hidden;
