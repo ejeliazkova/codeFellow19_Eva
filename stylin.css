@@ -87,7 +87,20 @@ body{
         margin-top: 50px;
         margin-bottom: 50px;
     }
+    .pageWrapper3{
+        background-color: #FFCA88;
+    }
+    .pageWrapper3 h2, h3{
+        color: rgb(209, 121, 79);
+    }
     
+    .pageWrapper1 h2{
+        color: rgb(209, 121, 79);
+    }
+    .projectParent h2{
+        color: #FFCA88;
+    }    
+
     
 /* define the flex-direction property for the container on each page*/
     .homeParent, .projectParent, .travelParent{
@@ -100,6 +113,7 @@ body{
     }
 
     .logo{
+        display: initial;
         background-image: url(prof.jpeg);
         width: 200px; height: 200px;
         float: left;
@@ -110,6 +124,9 @@ body{
 /* Once the screen is smaller than 800px, make the header smaller, the navbar into a dropdown,
     and change the flex-direction to columns rather than rows */
 @media (max-width: 800px){
+    .logo{
+        display: none;
+    }
     h1{
         font-size: 30px;
         text-align: left;

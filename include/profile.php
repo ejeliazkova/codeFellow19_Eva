@@ -1,5 +1,4 @@
 <?php
-
 //get one row of info (profile)
 function getProfile($profileId){
     $result = dbQuery('
@@ -11,7 +10,6 @@ function getProfile($profileId){
     )) ->fetch();
     return $result;
 }
-
 //get all info (profiles)
 function getAllProfiles(){
     $result = dbQuery('
@@ -20,7 +18,6 @@ function getAllProfiles(){
     ')->fetchAll();
     return $result;
 }
-
 //insert a new profile
 function insertProfile($name, $occupation, $school, $username, $password){
     dbQuery(
@@ -33,7 +30,6 @@ function insertProfile($name, $occupation, $school, $username, $password){
             'username' => $_REQUEST['username'],
             'password' => $_REQUEST['password']
         ]
-        );
+    );
+    return 'profileId';
 }
-
-?>

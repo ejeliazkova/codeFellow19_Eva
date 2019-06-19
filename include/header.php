@@ -12,8 +12,8 @@
                     <div class='Menu'>
                         <div class='navbar'>
                             <a href='hello.php'>Home</a>
-                            <a href='about.php'>About</a>
-                            <a href='projects.php'>Projects</a>
+                            <a href='#part1'>About</a>
+                            <a href='#part2'>Projects</a>
                             <a href='travel.php'>Travel</a>
                             <a href='contact.php'>Contact</a>
                         </div>
