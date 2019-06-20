@@ -1,37 +1,22 @@
 <?php
 include('config/init.php');
-echo "<a href='/people.php'> Go Back </a> <br /> <br />";
+echo "<a href='/login.php'> Go Back </a> <br /> <br />";
 
-$person = getPerson($_GET['personId']);
-$theJob = getSpecificJobs($person['personId']);
+//var_dump($_SESSION['personId']['personId']);
+echo"For user: ".$_SESSION['personId']['name']." these are the options:";
 
-echoTaskManager($person);
- 
-echo"these are my options:";
 
-foreach($theJob as $oneJob){
+getSpecificJobs($_SESSION ['personId']['personId']);
+var_dump(echoJobs($_SESSION ['personId']['personId']));
+
+/*foreach($theJob as $oneJob){
     echo" " .$oneJob['company']." as a ".$oneJob['position'];
 }
 if(isset($_REQUEST['add'])){
         
-    insertPerson($_REQUEST['name'], $_REQUEST['about'], $_REQUEST['user'], $_REQUEST['pass']
+    insertPerson($_REQUEST['name'], $_REQUEST['about'], $_REQUEST['username'], $_REQUEST['password']
     );
-}
-?>
-
-<form action='' method = 'post'>
-    <p class= 'Login'>
-    Next Step: <select name='next step'>
-        <option value='default'>- -</option>
-        <option value='Job Title'> Job Title</option>
-        <option value='Information'> Information</option> 
-        <option value='Documents'>Documents</option>
-        <option value='Status'>Status</option> 
-    </select>
-    <br/><br/>
-    <!-- submit button-->
-    <input type='submit' name='add' value='add' />
-</form>
+}*/
 
    
 

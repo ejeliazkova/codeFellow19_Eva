@@ -1,5 +1,17 @@
 <?php
 
+function attemptLogin($username, $password){
+    $result = dbQuery('
+        SELECT *
+        FROM people
+        WHERE username = :username
+        AND password = :password',
+        array('username' => $username,
+        'password' => $password)
+    ) -> fetch();
+    return $result;
+}
+
 // PEOPLE
 function getPerson($personId){
     $result = dbQuery('
@@ -40,6 +52,9 @@ function getSpecificJobs($personId){
         array('personId' => $personId)
     ) -> fetchAll();
         return $result;
+}
+function echoJobs($personId){
+    echo"Job: ".$personId[''].";
 }
 
 // #1: INSERT NEW
@@ -103,22 +118,3 @@ function echoTaskManager($people){
     
     ";
 }
-
-//function echoJobManager($jobs){
-  //  echo" 
-//
-  //  <body>
-//
-  //      <div class= 'parent1'>
-    //        <div class= 'childB'>
-      //          <h2>Jobs<h2>
-        //        <p>['company''position']</p>
-//
-  //              <p>['company''position']</p>
-//
-  //          </div>
-    //    </div>
-   // </body>
-    
-    //";/
-//}
