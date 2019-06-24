@@ -7,7 +7,7 @@ echo"For user: ".$_SESSION['personId']['name']." these are the options:";
 
 $personsId = $_SESSION['personId']['personId'];
 getSpecificJobs($personsId);
-//var_dump(echoJobs($_SESSION ['personId']['personId']));
+var_dump(echoJobs($_SESSION ['personId']['personId']));
 //echo"the jobs are ".$_SESSION['personId']['personId']." for dis girl.";
 /*foreach($theJob as $oneJob){
     echo" " .$oneJob['company']." as a ".$oneJob['position'];
