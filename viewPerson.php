@@ -1,14 +1,14 @@
 <?php
 include('config/init.php');
-echo "<a href='/login.php'> Go Back </a> <br /> <br />";
+echo "<a href='/login.php'> Go Back </a> <br/> <br/>";
 
 //var_dump($_SESSION['personId']['personId']);
 echo"For user: ".$_SESSION['personId']['name']." these are the options:";
 
-
-getSpecificJobs($_SESSION ['personId']['personId']);
-var_dump(echoJobs($_SESSION ['personId']['personId']));
-
+$personsId = $_SESSION['personId']['personId'];
+getSpecificJobs($personsId);
+//var_dump(echoJobs($_SESSION ['personId']['personId']));
+//echo"the jobs are ".$_SESSION['personId']['personId']." for dis girl.";
 /*foreach($theJob as $oneJob){
     echo" " .$oneJob['company']." as a ".$oneJob['position'];
 }

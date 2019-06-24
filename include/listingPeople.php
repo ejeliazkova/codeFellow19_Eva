@@ -44,30 +44,29 @@ function getJob($jobId){
 
     return $result;
 }
-function getSpecificJobs($personId){
+function getSpecificJobs($personsId){
     $result = dbQuery('
         SELECT *
         FROM jobs
-        WHERE personId = :personId',
-        array('personId' => $personId)
+        WHERE personsId = :personId',
+        array('personId' => $personsId)
     ) -> fetchAll();
         return $result;
 }
 function echoJobs($personId){
-    echo"Job: ".$personId[''].";
+    echo "Job: ".$personId[''];
 }
 
-// #1: INSERT NEW
-function insertPerson($name, $about, $user, $pass){
-    
+
+function insertPerson($name, $about, $username, $password){
     dbQuery(
-        'INSERT INTO people(name, about, user, pass)
-        VALUES(:name, :about, :user, :pass)',
+        'INSERT INTO people(name, about, username, password)
+        VALUES(:name, :about, :username, :password)',
         [
         'name' => $_REQUEST['name'],
         'about' => $_REQUEST['about'],
-        'user' => $_REQUEST['user'],
-        'pass' => $_REQUEST['pass']
+        'username' => $_REQUEST['username'],
+        'password' => $_REQUEST['password']
         ]
     );
 }
