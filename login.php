@@ -1,6 +1,17 @@
 <?php
 include('config/init.php');
-//echo"Login please";
+
+$username = "";
+$password = "";
+$usernameError = "";
+$passwordError = "";
+$sucess = "";
+
+if($_SERVER["REQUEST_METHOD"] == "$_POST"){
+    if(empty(trim($_POST["username"]))){
+        
+    }
+}
 
 if(isset($_REQUEST['attemptLogin'])){
     $personId = attemptLogin($_REQUEST['username'], $_REQUEST['password']);
@@ -11,11 +22,12 @@ if(isset($_REQUEST['attemptLogin'])){
     ";
     exit;
 }
+
 ?>
 
 <form action='' method = 'post'>
     <p class= 'Login'>
-        username: <input type='username' name='username' /><br/>
+        username: <input type='username' name='username' value="" required/><br/>
         password: <input type='password' name='password' /><br/>
     <br/><br/>
     <!-- submit button-->
