@@ -2,11 +2,9 @@
 include('config/init.php');
 echo "<a href='/login.php'> Go Back </a> <br/> <br/>";
 
-
-    $personId=getPerson($_REQUEST['personId']);
-    $_SESSION['personId']=$personId;
-    echo"A little bit about ".$_SESSION['personId']['name'].": ".$_SESSION['personId']['about'];
-
+$personId=getPerson($_REQUEST['personId']);
+$_SESSION['personId']=$personId;
+echo"A little bit about ".$_SESSION['personId']['name'].": ".$_SESSION['personId']['about'];
 
 if(isset($_REQUEST['jobView'])){
     $jobView=getSpecificJobs($_REQUEST['personId']);
@@ -15,7 +13,6 @@ if(isset($_REQUEST['jobView'])){
     //foreach($jobView as $jobViews){
         echo"Jobs: ".$_SESSION['jobView']['position']." at ".$_SESSION['jobView']['company'];
     //}
-    //var_dump($_SESSION['jobView']['position']);
     exit;
 }
 ?>
