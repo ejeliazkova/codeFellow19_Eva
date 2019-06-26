@@ -2,21 +2,29 @@
 include('config/init.php');
 echo "<a href='/login.php'> Go Back </a> <br/> <br/>";
 
-//var_dump($_SESSION['personId']['personId']);
-echo"For user: ".$_SESSION['personId']['name']." these are the options:";
 
-$personsId = $_SESSION['personId']['personId'];
-getSpecificJobs($personsId);
-var_dump(echoJobs($_SESSION ['personId']['personId']));
-//echo"the jobs are ".$_SESSION['personId']['personId']." for dis girl.";
-/*foreach($theJob as $oneJob){
-    echo" " .$oneJob['company']." as a ".$oneJob['position'];
+    $personId=getPerson($_REQUEST['personId']);
+    $_SESSION['personId']=$personId;
+    echo"A little bit about ".$_SESSION['personId']['name'].": ".$_SESSION['personId']['about'];
+
+
+if(isset($_REQUEST['jobView'])){
+    $jobView=getSpecificJobs($_REQUEST['personId']);
+    $_SESSION['jobView']=$jobView;
+    
+    //foreach($jobView as $jobViews){
+        echo"Jobs: ".$_SESSION['jobView']['position']." at ".$_SESSION['jobView']['company'];
+    //}
+    //var_dump($_SESSION['jobView']['position']);
+    exit;
 }
-if(isset($_REQUEST['add'])){
-        
-    insertPerson($_REQUEST['name'], $_REQUEST['about'], $_REQUEST['username'], $_REQUEST['password']
-    );
-}*/
+?>
+<form action='' method = 'post'>
+    <input type= 'hidden' name='jobView' value='true'/>
+    <input type= 'submit' name='Jobs' value='Jobs'/>
+
+</form>
+
 
    
 
