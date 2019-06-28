@@ -6,9 +6,8 @@ if(isset($_REQUEST['attemptLogin'])){
     //var_dump($personId);
     if($personId > 0){
         $_SESSION['personId']=$personId;
-        //var_dump($_SESSION);
-        echo"You are logged in as ".$personId.".<a href='viewPerson.php?personId="
-            .$personId."'> Go to ur prof</a>";
+        //var_dump($_SESSION['personId']);
+        echo"You are logged in as ".$personId.".<a href='user.php'> Homepage</a>";
         exit;
     }
     else{

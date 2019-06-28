@@ -1,11 +1,7 @@
-
 <?php
     include('config/init.php');
-    echoHeader();
 
-
-    $people = getAllPeople();
-                
+    $people = getAllPeople();           
     foreach($people as $person){
         echo "<a href='/viewPerson.php?personId=".$person['personId']."'>
             ".$person['name']."
@@ -13,18 +9,15 @@
     }
     
     if(isset($_REQUEST['newProfile'])){
-        
-        insertPerson($_REQUEST['name'], $_REQUEST['about'], $_REQUEST['user'], $_REQUEST['pass']
-        );
+        insertPerson($name, $about, $username, $password);
     }
 ?>
-    <form action='' method='post'>
-        <p class= 'Login'>
-            Name: <input type='text' name='name' /><br/>
-            About: <input type='text' name='about' /><br />
-            User:<input type='text' name='user' /><br />
-            Password:<input type='text' name='pass' /><br />
-        
+<form action='' method='post'>
+    <p class= 'Login'>
+        Name: <input type='text' name='name' /><br/>
+        About: <input type='text' name='about' /><br />
+        Username:<input type='text' name='username' /><br />
+        Password:<input type='text' name='password' /><br />
         <br/><br/>
         <!-- submit button-->
         <input type='submit' name='newProfile' value='Make a new profile' />
