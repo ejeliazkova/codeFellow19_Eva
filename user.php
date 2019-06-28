@@ -1,26 +1,34 @@
 <?php
 include('config/init.php');
-echo "<a href='/login.php'> Go Back </a> <br/> <br/>";
+echo "<a href='/login.php'> Log Out </a> <br/> <br/>";
+
+if(isset($_REQUEST['/login.php'])){
+    session_destroy();
+}
 
 $person = getPerson($_SESSION['personId']);
-//$_SESSION['personId']=$personId;
 echo"A little bit about ".$person['name'].": ".$person['about'];
-//var_dump($_SESSION);
 
 if(isset($_REQUEST['jobView'])){
-    $jobView=getJobsForPerson($_SESSION['personId']);
-    //$_SESSION['jobView']=$jobView;
-    var_dump($jobView);
-    //foreach($jobView as $job){
-        echo"Jobs: ".$jobView['position']." at ".$jobView['company'];
-    //}
+    $jobs=getJobsForPerson($person['personId']);
+    echo"<br/><br/>";
+    echo "Jobs: ";
+    foreach($jobs as $index => $job){
+        $num = $index + 1;
+        echo"<br/>";
+        echo $num.". ";
+        echo $job['position']." at ".$job['company'];
+    }
     exit;
 }
+
 if(isset($_REQUEST['addJob'])){
-    insertJob($company, $position);
+    insertJob($person['personId']);
+
 }
 ?>
-<form action='' method = 'post'>
+<!--could be a link or just a get request bc post is saving-->
+<form action='' method = 'get'>
     <input type= 'hidden' name='jobView' value='true'/>
     <input type= 'submit' name='Jobs' value='Jobs'/>
 

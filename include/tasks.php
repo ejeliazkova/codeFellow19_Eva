@@ -57,7 +57,7 @@ function insertJob($company, $position){
         'INSERT INTO jobs(personId, company, position)
         VALUES(:personId, :company, :position)',
         [
-        'personId' => $_REQUEST['personId'],
+        'personId' => $_SESSION['personId'],
         'company' => $_REQUEST['company'],
         'position' => $_REQUEST['position']
         ]
