@@ -23,8 +23,8 @@ if(isset($_REQUEST['jobView'])){
 }
 
 if(isset($_REQUEST['addJob'])){
-    insertJob($person['personId']);
-
+    $thisJob = insertJob($person['company'], $person['position']);
+    //var_dump($thisJob);
 }
 ?>
 <!--could be a link or just a get request bc post is saving-->
