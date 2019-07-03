@@ -4,6 +4,7 @@ echo "<a href='/login.php'> Log Out </a> <br/> <br/>";
 
 if(isset($_REQUEST['/login.php'])){
     session_destroy();
+    //redirect to login page without destroying page
 }
 
 $person = getPerson($_SESSION['personId']);
@@ -18,27 +19,40 @@ if(isset($_REQUEST['jobView'])){
         echo"<br/>";
         echo $num.". ";
         echo $job['position']." at ".$job['company'];
+        echo "
+            <form action='' method = 'post'>
+            <input type= 'hidden' name='removeJob' value='true'/>
+            <input type= 'submit' name='removeJob' value='Remove Job'/>
+            </form>
+            <form action='' method = 'post'>
+            <input type= 'hidden' name='editJob' value='true'/>
+            <input type= 'submit' name='editJob' value='Edit Job'/>
+            </form>
+        ";
+        /*if(isset($_REQUEST['removeJob'])){
+            $goneJob=removeJob($job['jobId']);
+
+        }*/
+    }
+    echo"<form action='' method = 'post'>
+    <input type= 'text' name='company' value='Company' />
+    <input type= 'text' name='position' value='Position'/>
+    <input type= 'hidden' name='addJob' value='true'/>
+    <input type= 'submit' name='addJob' value='Add a Job'/>
+    </form>";
+    if(isset($_REQUEST['addJob'])){
+        $thisJob = insertJob($person['personId'], $_REQUEST['company'], $_REQUEST['position']);
+        //php redirect page using header();
     }
     exit;
 }
 
-if(isset($_REQUEST['addJob'])){
-    $thisJob = insertJob($person['company'], $person['position']);
-    //var_dump($thisJob);
-}
 ?>
 <!--could be a link or just a get request bc post is saving-->
 <form action='' method = 'get'>
     <input type= 'hidden' name='jobView' value='true'/>
     <input type= 'submit' name='Jobs' value='Jobs'/>
 
-</form>
-
-<form action='' method = 'post'>
-    <input type= 'text' name='company' value='Company' />
-    <input type= 'text' name='position' value='Position'/>
-    <input type= 'hidden' name='addJob' value='true'/>
-    <input type= 'submit' name='addJob' value='Add a Job'/>
 </form>
 
 

@@ -34,10 +34,10 @@ function insertPerson($name, $about, $username, $password){
         'INSERT INTO people(name, about, username, password)
         VALUES(:name, :about, :username, :password)',
         [
-        'name' => $_REQUEST['name'],
-        'about' => $_REQUEST['about'],
-        'username' => $_REQUEST['username'],
-        'password' => $_REQUEST['password']
+        'name' => $name,
+        'about' => $about,
+        'username' => $username,
+        'password' => $password
         ]
     );
 }
@@ -52,15 +52,28 @@ function getJobsForPerson($personId){
         return $result;
 }
 
-function insertJob($company, $position){
+function insertJob($personId, $company, $position){
     dbQuery(
         'INSERT INTO jobs(personId, company, position)
         VALUES(:personId, :company, :position)',
         [
-        'personId' => $_SESSION['personId'],
-        'company' => $_REQUEST['company'],
-        'position' => $_REQUEST['position']
+        'personId' => $personId,
+        'company' => $company,
+        'position' => $position
         ]
     );
 }
+/*function removeJob($jobId){
+    $result = dbQuery('
+        SELECT*
+        FROM jobs
+        WHERE jobId = :jobId',
+        array('jobId' => $jobId)
+    ) -> fetch();
+    return $result;
+}*/
+
+
+
+
 
