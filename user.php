@@ -21,8 +21,8 @@ if(isset($_REQUEST['jobView'])){
         echo $job['position']." at ".$job['company'];
         echo "
             <form action='' method = 'post'>
-            <input type= 'hidden' name='removeJob' value='true'/>
-            <input type= 'submit' name='removeJob' value='Remove Job'/>
+            <input type= 'hidden' name='addJobInfo' value='true'/>
+            <input type= 'submit' name='addJobInfo' value='Add Info'/>
             </form>
             <form action='' method = 'post'>
             <input type= 'hidden' name='editJob' value='true'/>
@@ -33,6 +33,18 @@ if(isset($_REQUEST['jobView'])){
             $goneJob=removeJob($job['jobId']);
 
         }*/
+        if(isset($_REQUEST['addJobInfo'])){
+            echo"<form action='' method = 'post'>
+            <input type= 'text' name='location' value='Location' />
+            <input type= 'text' name='salary' value='Salary'/>
+            <input type= 'text' name='responsibilities' value='Responsibilities'/>
+            <input type= 'text' name='skills' value='Skills'/>
+            <input type= 'hidden' name='saveJobInfo' value='true'/>
+            <input type= 'submit' name='saveJobInfo' value='Save'/>
+            </form>";
+        }
+        if(isset($_REQUEST[]))
+
     }
     echo"<form action='' method = 'post'>
     <input type= 'text' name='company' value='Company' />
@@ -54,7 +66,6 @@ if(isset($_REQUEST['jobView'])){
     <input type= 'submit' name='Jobs' value='Jobs'/>
 
 </form>
-
 
    
 
