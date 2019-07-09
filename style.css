@@ -1,38 +1,49 @@
-body{
-    background-image: url("background.jpg");
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
 h1{
-    color: #FA6900; text-align: center; font-weight: 500; font-style: normal;
-    font-size: 50px; letter-spacing: 10px; line-height: .9em; text-transform: uppercase;
-}
+    text-align: center;
+    letter-spacing: 5px;
+    font-variant-caps: all-petite-caps;
 
-.parent1{
+}
+.form{
     display: flex;
-    flex-direction: row;
-    box-flex: row wrap;
-    justify-content: space-evenly;
-    align-items: stretch;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #006992;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-variant-caps: all-petite-caps;
+    font-size: 25px;
 }
 
-.childA{
-    color: black;
-}
-.childA a{
-    color: aquamarine;
-}
-.childB{
-    color: black;
-
+.button{
+    color: #001D4A;
 }
 
-.childA h2{
-    margin-right: 50px;
-    color: #69D2E7;
+a{
+    color: #F1BC45;
+}
+.menu{
+    background-color: #27476E;
+    float: left;
+    word-spacing: 20px;
+}
+.register{
+    background-color: #27476E;
+    text-align: left;
 }
 
-.childB h2{
-    margin-left: 50px;
-    color: #69D2E7;
+.dropMenu{
+    display: none;
+}
+
+@media (max-width: 800px){
+    .navbar{
+        display: none;
+    }
+    .dropMenu{
+        display: inline-block;
+        position: relative;
+        padding-left: 5px;  
+    }
 }
