@@ -12,7 +12,6 @@ if(isset($_REQUEST['attemptLogin'])){
         echo "Please enter a valid username and password.";
     }
 }
-//don't call echoHeader() because then the menu will have too many options
 ?>
 <html>
     <head>

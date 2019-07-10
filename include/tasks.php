@@ -38,6 +38,15 @@ function attemptLogin($username, $password){
     ) -> fetch();
     return @$result['personId'];
 }
+function verifyUser(){
+    if(isLoggedIn()){
+        return true;
+    }
+    else{
+        //header(Location: /'login.php');
+        exit;
+    }
+}
 
 function isLoggedIn(){
     if(isset($_SESSION['personId'])){
@@ -105,39 +114,51 @@ function insertJob($personId, $company, $position){
         ]
     );
 }
-function updateJobInfo($jobId, $location, $salary, $responsibilities, $skills){
-    dbQuery(
+
+
+
+
+//OPTION 1
+function updateJobInfo($jobId, $location, $salary, $res, $skills){
+    $result = dbQuery(
         'UPDATE jobs
-        SET location = :location
-        SET salary = :salary
-        SET responsibilities= $responsibilities
-        SET skills = $skills
-        WHERE jobId = :jobId'
-    );
-}
-function insertJobInfo($jobId, $location, $salary, $responsibilities, $skills){
-    dbQuery(
-        'INSERT INTO jobs(jobId, location, salary, responsibilities, skills)
-        VALUES(:jobId, :location, :salary, :responsibilities, :skills)
+        SET location = :location, salary = :salary, res= :res, skills = :skills
         WHERE jobId = :jobId'
         ,[
+            'location' => $location,
+            'salary' => $salary,
+            'res' => $res,
+            'skills' => $skills
+        ]
+    )->fetch();
+    return $result;
+}
+//OPTION 2
+/*function insertJobInfo($jobId, $location, $salary, $res, $skills){
+    dbQuery(
+        'INSERT INTO jobs(location, salary, res, skills)
+        VALUES(:location, :salary, :res, :skills)
+        WHERE jobId = :jobId'
+        ,[
+        'jobId' => $jobId,
         'location' => $location,
-        'company' => $salary,
-        'position' => $responsibilities,
+        'salary' => $salary,
+        'res' => $res,
         'skills' => $skills
         ]
     );
-}
-/*IDK HOW TO UPDATE SO IDT I SHOULD TRY
-TO FIGURE THIS OUT YET
+}*/
+
 
 function softDeleteJob($jobId){
     $result = dbQuery('
-        SELECT*
-        FROM jobs
-        WHERE jobId = $jobId
-        UPDATE ',
-        array('jobId' => $jobId)
+        UPDATE jobs
+        SET deletedAt = 
+        WHERE jobId = :jobId
+        ',
+        array(
+            'jobId' => $jobId
+        )
     ) -> fetch();
     return $result;
-}*/
+}

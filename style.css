@@ -37,13 +37,3 @@ a{
     display: none;
 }
 
-@media (max-width: 800px){
-    .navbar{
-        display: none;
-    }
-    .dropMenu{
-        display: inline-block;
-        position: relative;
-        padding-left: 5px;  
-    }
-}

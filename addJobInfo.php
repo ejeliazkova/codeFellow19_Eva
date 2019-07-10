@@ -1,25 +1,31 @@
 <?php
 include('config/init.php');
-echoHeader('Edit Job Info', 'Edit Job Info');
+isLoggedIn();
+$job = getJob($_GET["jobId"]);
 
-if(isLoggedIn(true)){
-    $jobs=getJobsForPerson($_SESSION['personId']);
-    
-    $job = getJob($jobs['index']);
+if(isset($_REQUEST['saveJobInfo'])){
+    updateJobInfo($job['jobId'], $_POST['location'], $_POST['salary'], $_POST['res'], $_POST['skills']);
+}      
+if(isset($_REQUEST['deleteJob'])){
+    softDeleteJob($job['jobId']);
+}
+echoHeader('Job Info', $job['position']." at ".$job['company']);
+
 
     echo"
     <div class= 'form'>
-    <form action='' method = 'post'>
-    <input type= 'text' name='location' value='Location' />
-    <input type= 'text' name='salary' value='Salary'/>
-    <input type= 'text' name='responsibilities' value='Responsibilities'/>
-    <input type= 'text' name='skills' value='Skills'/>
-    <input type= 'hidden' name='saveJobInfo' value='true'/>
-    <input type= 'submit' name='saveJobInfo' value='Save'/>
-    </form>
-    </div";
+        <form action='' method = 'post'>
+            <input type= 'text' name='location' placeholder='location' value = '".$job['location']."'/>
+            <input type= 'text' name='salary' placeholder='salary' value = '".$job['salary']."'/>
+            <input type= 'text' name='res' placeholder='responsibilities' value = '".$job['res']."'/>
+            <input type= 'text' name='skills' placeholder='skills' value = '".$job['skills']."'/>
+            <input type= 'hidden' name='saveJobInfo' value='true'/>
+            <input type= 'submit' name='saveJobInfo' value='Save'/>
 
-if(isset($_REQUEST['saveJobInfo'])){
-    insertJobInfo($job['jobId'], $_REQUEST['location'], $_REQUEST['salary'], $_REQUEST['responsibilities'], $_REQUEST['skills']);
-}
-}
+        <form action='' method = 'post'>
+            <input type= 'hidden' name='deleteJob' value='true'/>
+            <input type= 'submit' name='deleteJob' value='Delete'/>
+        </form>
+            <input type= 'hidden' name='jobId' value='".$job['jobId']."'/>
+        </form>
+    </div";
