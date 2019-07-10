@@ -98,8 +98,11 @@ function getJobsForPerson($personId){
     $result = dbQuery('
         SELECT *
         FROM jobs
-        WHERE personId = :personId',
-        array('personId' => $personId)
+        WHERE personId = :personId
+        AND deletedAt is NULL'
+        ,[
+            'personId' => $personId
+        ]
     ) -> fetchAll();
         return $result;
 }
@@ -115,16 +118,13 @@ function insertJob($personId, $company, $position){
     );
 }
 
-
-
-
-//OPTION 1
 function updateJobInfo($jobId, $location, $salary, $res, $skills){
     $result = dbQuery(
         'UPDATE jobs
         SET location = :location, salary = :salary, res= :res, skills = :skills
         WHERE jobId = :jobId'
         ,[
+            'jobId' => $jobId,
             'location' => $location,
             'salary' => $salary,
             'res' => $res,
@@ -133,32 +133,16 @@ function updateJobInfo($jobId, $location, $salary, $res, $skills){
     )->fetch();
     return $result;
 }
-//OPTION 2
-/*function insertJobInfo($jobId, $location, $salary, $res, $skills){
-    dbQuery(
-        'INSERT INTO jobs(location, salary, res, skills)
-        VALUES(:location, :salary, :res, :skills)
+
+//when I 
+function softDeleteJob($jobId){
+    $result = dbQuery(
+        'UPDATE jobs
+        SET deletedAt = CURRENT_TIMESTAMP 
         WHERE jobId = :jobId'
         ,[
-        'jobId' => $jobId,
-        'location' => $location,
-        'salary' => $salary,
-        'res' => $res,
-        'skills' => $skills
-        ]
-    );
-}*/
-
-
-function softDeleteJob($jobId){
-    $result = dbQuery('
-        UPDATE jobs
-        SET deletedAt = 
-        WHERE jobId = :jobId
-        ',
-        array(
             'jobId' => $jobId
-        )
-    ) -> fetch();
+        ]
+    )->fetch();
     return $result;
 }
