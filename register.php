@@ -1,8 +1,10 @@
 <?php
     include('config/init.php');
-    echoHeader('Register', 'Register');
+    echoTaskHeader('Register', 'Register');
+    
     if(isset($_REQUEST['newProfile'])){
         insertPerson($_REQUEST['name'], $_REQUEST['about'], $_REQUEST['username'], $_REQUEST['password']);
+        echo"Go to the login page and sign in to see your profile!";
     }
 ?>
 <div class= 'form'>

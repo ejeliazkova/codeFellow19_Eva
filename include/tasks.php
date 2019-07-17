@@ -1,5 +1,5 @@
 <?php
-function echoHeader($pageTitle, $h1){ 
+function echoTaskHeader($pageTitle, $h1){ 
     echo "
         <html>
             <head>
@@ -9,7 +9,7 @@ function echoHeader($pageTitle, $h1){
             <body>
                 <div class='menu'>
                     <div class='navbar'>
-                      <a href='/login.php'> LogOut </a>
+                      <a href='/logout.php'> LogOut </a>
                       <a href='/user.php'> Profile </a>
                       <a href='/jobsForPerson.php'> Jobs </a>
                     </div>
@@ -19,7 +19,7 @@ function echoHeader($pageTitle, $h1){
                 <div class='dropMenu'>
                     <a href= 'dropLink'>Menu</a>
                         <div class='dropDownContent'>
-                          <a href='/login.php'> Log Out </a>
+                          <a href='/logout.php'> Log Out </a>
                           <a href='/user.php'> Profile </a>
                           <a href='/jobsForPerson.php'> Jobs </a>
                         </div>
@@ -33,8 +33,10 @@ function attemptLogin($username, $password){
         FROM people
         WHERE username = :username
         AND password = :password',
-        array('username' => $username,
-        'password' => $password)
+        [
+            'username' => $username,
+            'password' => $password
+        ]
     ) -> fetch();
     return @$result['personId'];
 }
@@ -43,7 +45,7 @@ function verifyUser(){
         return true;
     }
     else{
-        //header(Location: /'login.php');
+        header("Location: /login.php");
         exit;
     }
 }
@@ -58,18 +60,20 @@ function isLoggedIn(){
 }
 function getPerson($personId){
     $result = dbQuery('
-    SELECT *
-    FROM people
-    WHERE personId = :personId',
-    array('personId' => $personId)
+        SELECT *
+        FROM people
+        WHERE personId = :personId',
+        [
+            'personId' => $personId
+        ]
     ) -> fetch();
     return $result;
 }
 
 function getAllPeople(){
     $result = dbQuery('
-    SELECT *
-    FROM people'
+        SELECT *
+        FROM people'
     ) -> fetchAll();
     return $result;
 }
@@ -87,10 +91,12 @@ function insertPerson($name, $about, $username, $password){
 }
 function getJob($jobId){
     $result = dbQuery('
-    SELECT *
-    FROM jobs
-    WHERE jobId = :jobId',
-    array('jobId' => $jobId)
+        SELECT *
+        FROM jobs
+        WHERE jobId = :jobId',
+        [
+            'jobId' => $jobId
+        ]
     ) -> fetch();
     return $result;
 }
@@ -99,16 +105,16 @@ function getJobsForPerson($personId){
         SELECT *
         FROM jobs
         WHERE personId = :personId
-        AND deletedAt is NULL'
-        ,[
+        AND deletedAt is NULL',
+        [
             'personId' => $personId
         ]
     ) -> fetchAll();
-        return $result;
+    return $result;
 }
 function insertJob($personId, $company, $position){
-    dbQuery(
-        'INSERT INTO jobs(personId, company, position)
+    dbQuery('
+        INSERT INTO jobs(personId, company, position)
         VALUES(:personId, :company, :position)',
         [
         'personId' => $personId,
@@ -119,11 +125,14 @@ function insertJob($personId, $company, $position){
 }
 
 function updateJobInfo($jobId, $location, $salary, $res, $skills){
-    $result = dbQuery(
-        'UPDATE jobs
-        SET location = :location, salary = :salary, res= :res, skills = :skills
-        WHERE jobId = :jobId'
-        ,[
+    $result = dbQuery('
+        UPDATE jobs
+        SET location = :location,
+            salary = :salary,
+            res= :res,
+            skills = :skills
+        WHERE jobId = :jobId',
+        [
             'jobId' => $jobId,
             'location' => $location,
             'salary' => $salary,
@@ -134,13 +143,12 @@ function updateJobInfo($jobId, $location, $salary, $res, $skills){
     return $result;
 }
 
-//when I 
 function softDeleteJob($jobId){
-    $result = dbQuery(
-        'UPDATE jobs
+    $result = dbQuery('
+        UPDATE jobs
         SET deletedAt = CURRENT_TIMESTAMP 
-        WHERE jobId = :jobId'
-        ,[
+        WHERE jobId = :jobId',
+        [
             'jobId' => $jobId
         ]
     )->fetch();

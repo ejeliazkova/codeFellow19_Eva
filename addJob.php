@@ -1,12 +1,11 @@
 <?php
 include('config/init.php');
-echoHeader('Add a Job', 'Add a Job');
-if(isLoggedIn(true)){
-
+verifyUser();
 if(isset($_REQUEST['addThisJob'])){
     insertJob($_SESSION['personId'], $_REQUEST['company'], $_REQUEST['position']);
+    header("Location: /jobsForPerson.php");
 }
-}
+echoTaskHeader('Add a Job', 'Add a Job');
 ?>
 <div class= 'form'>
 <form action='' method='post'>
