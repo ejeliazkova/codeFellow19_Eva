@@ -1,0 +1,39 @@
+h1{
+    text-align: center;
+    letter-spacing: 5px;
+    font-variant-caps: all-petite-caps;
+
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #006992;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-variant-caps: all-petite-caps;
+    font-size: 25px;
+}
+
+.button{
+    color: #001D4A;
+}
+
+a{
+    color: #F1BC45;
+}
+.menu{
+    background-color: #27476E;
+    float: left;
+    word-spacing: 20px;
+}
+.register{
+    background-color: #27476E;
+    text-align: left;
+}
+
+.dropMenu{
+    display: none;
+}
+
