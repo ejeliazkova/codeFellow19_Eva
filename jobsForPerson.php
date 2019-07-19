@@ -13,8 +13,11 @@ foreach($jobs as $index => $job){
     echo"<br/>";
     echo ($index+1).". ";
     echo $job['position']." at ".$job['company'];
+    //echo "
+    //    <a href='/addJobInfo.php?jobId=".$job['jobId']."'> Edit Info </a><br/><br/>
+    //";
     echo "
-        <a href='/addJobInfo.php?jobId=".$job['jobId']."'> Edit Info </a><br/><br/>
+        <a onclick= 'popUp()' href='#'> Edit Info </a><br/><br/>
     ";
 }
 echo"<form action='' method = 'post'>
@@ -22,3 +25,4 @@ echo"<form action='' method = 'post'>
     <input type= 'submit' name='addAJob' value='Add a Job'/>
     </form
 ";
+?>

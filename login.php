@@ -1,7 +1,7 @@
 <?php
 include('config/init.php');
 if(isset($_REQUEST['attemptLogin'])){
-    $personId = attemptLogin($_REQUEST['username'], $_REQUEST['password']);
+    $personId = attemptLogin($_REQUEST['username'], sha1($_REQUEST['password']));
     
     if($personId > 0){
         $_SESSION['personId']=$personId;
