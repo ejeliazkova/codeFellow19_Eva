@@ -15,15 +15,6 @@ function echoTaskHeader($pageTitle, $h1){
                     </div>
                 </div>
             <h1>".$h1."</h1>
-                    
-                <div class='dropMenu'>
-                    <a href= 'dropLink'>Menu</a>
-                        <div class='dropDownContent'>
-                          <a href='/logout.php'> Log Out </a>
-                          <a href='/user.php'> Profile </a>
-                          <a href='/jobsForPerson.php'> Jobs </a>
-                        </div>
-                </div>
             </body>
         ";
 }

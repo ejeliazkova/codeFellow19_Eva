@@ -1,39 +1,95 @@
+body{
+    background-image: url("loginPlant.jpg");
+    width: 100%;
+    height: 100%;
+}
 h1{
     text-align: center;
     letter-spacing: 5px;
     font-variant-caps: all-petite-caps;
-
 }
-.form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background-color: #006992;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-variant-caps: all-petite-caps;
-    font-size: 25px;
-}
-
-.button{
-    color: #001D4A;
-}
-
 a{
     color: #F1BC45;
 }
-.menu{
-    background-color: #27476E;
-    float: left;
-    word-spacing: 20px;
+.navbar{
+    text-align: center;
+    word-spacing: 50px;
 }
 .register{
     background-color: #27476E;
     text-align: left;
 }
-
-.dropMenu{
-    display: none;
+.loginTitle{
+    text-align: center;
+    letter-spacing: 5px;
+    font-variant-caps: all-petite-caps;
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+.homepage{
+    position: fixed;
+    width: 340px;
+    height: 280px;
+    top:50%;
+    left: 50%;
+    margin-top: -180px;
+    margin-left: -170px;
+    
+    border-radius: 10PX;
+    border: 1px solid #ccc;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+}
+.rpage{
+    position: fixed;
+    width: 340px;
+    height: 340px;
+    top:50%;
+    left: 50%;
+    margin-top: -140px;
+    margin-left: -170px;
+    background-color: none;
+    border-radius: 10PX;
+    border: 1px solid #ccc;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+}
+form{
+    margin: 0auto;
+    margin-top: 20px;
+}
+label{
+    color:black;
+    display: inline-block;
+    margin-left: 18px;
+    padding-top:20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    font-size: 18px;
+    font-weight: bolder;
 }
 
+ input{
+     float: right;
+     margin-right: 20px;
+     margin-top: 20px;
+     width: 200px;
+     height: 30px;
+     
+     font-family: "Helvetica Neue", Helvetica, sans-serif;
+     font-size: 14px;
+     font-weight: bold;
+     outline: none;
+     outline-style: groove;
+     color: #27476E;
+ }
+ input[type=submit]{
+     width: 70px;
+ }
+ input[type=username]{
+     padding-left: 10px;
+ }
+ input[type=password]{
+    padding-left: 10px;
+ }
+ input[name=newProfile]{
+    width: 70px;
+ }
