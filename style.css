@@ -1,3 +1,4 @@
+/*General Rules for Styling*/
 body{
     background-image: url("loginPlant.jpg");
     width: 100%;
@@ -7,50 +8,19 @@ h1{
     text-align: center;
     letter-spacing: 5px;
     font-variant-caps: all-petite-caps;
-}
-a{
-    color: #F1BC45;
+    color: #476858;
+    font-size: 56px;
+    font-weight: 50;
 }
 .navbar{
     text-align: center;
     word-spacing: 50px;
 }
-.register{
-    background-color: #27476E;
-    text-align: left;
+a{
+    color: #FBFBFB;
 }
-.loginTitle{
-    text-align: center;
-    letter-spacing: 5px;
-    font-variant-caps: all-petite-caps;
-    font-size: 24px;
-    margin-bottom: 0px;
-}
-.homepage{
-    position: fixed;
-    width: 340px;
-    height: 280px;
-    top:50%;
-    left: 50%;
-    margin-top: -180px;
-    margin-left: -170px;
-    
-    border-radius: 10PX;
-    border: 1px solid #ccc;
-    box-shadow: 0 10px 20px rgba(0,0,0,.1);
-}
-.rpage{
-    position: fixed;
-    width: 340px;
-    height: 340px;
-    top:50%;
-    left: 50%;
-    margin-top: -140px;
-    margin-left: -170px;
-    background-color: none;
-    border-radius: 10PX;
-    border: 1px solid #ccc;
-    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+a:hover{
+    color: #020603;
 }
 form{
     margin: 0auto;
@@ -60,36 +30,200 @@ label{
     color:black;
     display: inline-block;
     margin-left: 18px;
-    padding-top:20px;
+    padding-top:5px;
     padding-bottom: 20px;
     padding-right: 10px;
     font-size: 18px;
     font-weight: bolder;
 }
-
- input{
-     float: right;
-     margin-right: 20px;
-     margin-top: 20px;
-     width: 200px;
-     height: 30px;
+input{
+    float: right;
+    margin-right: 20px;
+    margin-top: 0px;
+    width: 200px;
+    height: 30px;
      
-     font-family: "Helvetica Neue", Helvetica, sans-serif;
-     font-size: 14px;
-     font-weight: bold;
-     outline: none;
-     outline-style: groove;
-     color: #27476E;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+    outline-style: groove;
+    color: #27476E;
  }
+
+/* The register page Styling {the registration window; form inputs} */
+.register{
+    background-color: #27476E;
+    text-align: left;
+}
+.rpage{
+    position: fixed;
+    width: 340px;
+    height: 340px;
+    top:50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -170px;
+    background-color: none;
+    border-radius: 10PX;
+    border: 1px solid #ccc;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+}
+input[name=newProfile]{
+    width: 70px;
+ }
+
+/* The Login page Styling {Login window; form inputs}*/
+.loginWindowTitle{
+    text-align: center;
+    letter-spacing: 5px;
+    font-variant-caps: all-petite-caps;
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+.loginWindow{
+    position: fixed;
+    width: 340px;
+    height: 280px;
+    top:50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -170px;
+    
+    border-radius: 10PX;
+    border: 1px solid #ccc;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+    display: flex;
+    flex-direction: column;
+}
+input[type=username]{
+    padding-left: 10px;
+}
+input[type=password]{
+   padding-left: 10px;
+}
+
+/*Each user's page styling {List of Jobs; edit button; edit popup; docs button;
+    docs popup}*/
+.jobs{
+    font-size: 24px;
+    font-variant-caps: all-petite-caps;
+    color: white; 
+}
+.jobWrapper{
+   display: flex;
+   flex-direction: row;
+}
+input[name=addAJob]{
+    float: left;
+    width: 100px;
+}
+
+/* Popup container */
+.popup {
+    position: fixed;
+    
+    margin-top: 0px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  /* The actual popup (appears on top) */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 250px;
+    height: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 8px;
+    position: absolute;
+    z-index: 5;
+    bottom: 125%;
+    left: 50%;
+    margin-left: 50px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+
  input[type=submit]{
      width: 70px;
  }
- input[type=username]{
-     padding-left: 10px;
+
+ .modal {
+    display: none;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    background: #fff;
+    width: 320px;
+    height: 320px;
+    text-align: center;
+    box-sizing:border-box;
+    box-shadow:0 0 20px rgba(0,0,0,.2);
  }
- input[type=password]{
-    padding-left: 10px;
- }
- input[name=newProfile]{
-    width: 70px;
- }
+ .visible {
+      display: block;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    background: #fff;
+    width: 320px;
+    height: 320px;
+    text-align: center;
+    box-sizing:border-box;
+    box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+.modal__header {
+    color:white;
+    background: #333;
+    line-height: 50px;
+    text-align: center;
+    position: relative;
+    height:50px;
+    box-sizing:border-box;
+} 
+.js-close-modal{
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+  display: block;
+  padding: 0 20px;
+  font-size:16px;
+  background: #555;
+  height: 100%;  
+}

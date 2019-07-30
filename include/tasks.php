@@ -5,8 +5,10 @@ function echoTaskHeader($pageTitle, $h1){
             <head>
                 <title>".$pageTitle."</title>
                 <link rel='stylesheet' type='text/css' href='/style.css'>
+                <script src='jquery-3.4.1.min.js'></script>
             </head>
             <body>
+                <h1>".$h1."</h1>
                 <div class='menu'>
                     <div class='navbar'>
                       <a href='/logout.php'> LogOut </a>
@@ -14,9 +16,20 @@ function echoTaskHeader($pageTitle, $h1){
                       <a href='/jobsForPerson.php'> Jobs </a>
                     </div>
                 </div>
-            <h1>".$h1."</h1>
             </body>
-        ";
+        
+            <script>
+            // When the user clicks on <div>, open the popup
+            
+            function openModal(jobId){
+                $('#modal_'+jobId).addClass('visible');
+            }
+
+            function closeModal(jobId){
+                $('#modal_'+jobId).removeClass('visible');
+            }
+        </script>
+    ";
 }
 function attemptLogin($username, $password){
     $result = dbQuery('

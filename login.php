@@ -23,19 +23,42 @@ if(isset($_REQUEST['attemptLogin'])){
             <a href='register.php'>Register</a>
             <a href='contact.php'>Contact</a>
         </div>
-    <div class='homepage'>  
-        <div class= loginTitle>
+    <div class='loginWindow'>  
+        <div class= loginWindowTitle>
             <h2>Login</h2>
         </div>
         <form action='' method = 'post'>
-            <label for="username">Username:</label>
-            <input type='username' name='username' required/><br/>
-            <label for="password">Password:</label>
-            <input type='password' name='password' /><br/>
+            <input type='username' placeholder= 'username' name='username' required/><br/>
+            <input type='password' placeholder= 'password' name='password' /><br/>
             <div class='lower'>
                 <input type= 'hidden' name='attemptLogin' value='true'/>
                 <input class='button' type='submit' name='login'/>
             </div>
         </form>
     </div>
+
+    <a href="#" class="js-open-modal">open modal</a>
+    <div class="modal">
+        <div class="modal__header">modal header
+            <a href="#" class="js-close-modal">X</a>
+        </div>
+        <p>
+            hey there, I'm the modal
+        </p>
+
+    </div>
+    <script>
+        $(".js-open-modal").click(function(){
+            $(".modal").addClass("visible");
+        });
+        $(".js-close-modal").click(function(){
+            $(".modal").removeClass("visible");
+        });
+//if you click on anything except the modal itself or the "open modal" link, close the modal
+        $(document).click(function(event) {
+            if (!$(event.target).closest(".modal,.js-open-modal").length) {
+                $("body").find(".modal").removeClass("visible");
+            }
+        });
+    </script>
     </body>

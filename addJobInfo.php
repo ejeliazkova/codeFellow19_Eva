@@ -19,6 +19,7 @@ echoTaskHeader('Job Info', $job['position']." at ".$job['company']);
 echo"
     <div class= 'form'>
         <form action='' method = 'post'>
+            
             <input type= 'text' name='location' placeholder='location' value = '".$job['location']."'/>
             <input type= 'text' name='salary' placeholder='salary' value = '".$job['salary']."'/>
             <input type= 'text' name='res' placeholder='responsibilities' value = '".$job['res']."'/>
