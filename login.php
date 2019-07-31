@@ -23,42 +23,23 @@ if(isset($_REQUEST['attemptLogin'])){
             <a href='register.php'>Register</a>
             <a href='contact.php'>Contact</a>
         </div>
-    <div class='loginWindow'>  
-        <div class= loginWindowTitle>
-            <h2>Login</h2>
-        </div>
-        <form action='' method = 'post'>
-            <input type='username' placeholder= 'username' name='username' required/><br/>
-            <input type='password' placeholder= 'password' name='password' /><br/>
-            <div class='lower'>
-                <input type= 'hidden' name='attemptLogin' value='true'/>
-                <input class='button' type='submit' name='login'/>
+        <div class='loginWindow'>  
+            <div class='loginWindowContents'>
+                <div class= 'loginChild'>
+                    <h2>Login</h2>
+                </div>
+                <form action='' method = 'post'>
+                    <div class='loginChild'>
+                        <input type='username' id= 'loginUser' placeholder= 'username' name='username' required/>
+                    </div>
+                    <div class='loginChild'>
+                        <input type='password' id= 'loginPassword' placeholder= 'password' name='password'/>
+                    </div>
+                    <div class='loginChild'>
+                        <input type= 'hidden' name='attemptLogin' value='true'/>
+                        <input class='button' id= 'loginButton' type='submit' name='login'/>
+                    </div>
+                </form>
             </div>
-        </form>
-    </div>
-
-    <a href="#" class="js-open-modal">open modal</a>
-    <div class="modal">
-        <div class="modal__header">modal header
-            <a href="#" class="js-close-modal">X</a>
         </div>
-        <p>
-            hey there, I'm the modal
-        </p>
-
-    </div>
-    <script>
-        $(".js-open-modal").click(function(){
-            $(".modal").addClass("visible");
-        });
-        $(".js-close-modal").click(function(){
-            $(".modal").removeClass("visible");
-        });
-//if you click on anything except the modal itself or the "open modal" link, close the modal
-        $(document).click(function(event) {
-            if (!$(event.target).closest(".modal,.js-open-modal").length) {
-                $("body").find(".modal").removeClass("visible");
-            }
-        });
-    </script>
     </body>

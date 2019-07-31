@@ -73,15 +73,7 @@ input[name=newProfile]{
     width: 70px;
  }
 
-/* The Login page Styling {Login window; form inputs}*/
-.loginWindowTitle{
-    text-align: center;
-    letter-spacing: 5px;
-    font-variant-caps: all-petite-caps;
-    font-size: 24px;
-    margin-bottom: 0px;
-}
-.loginWindow{
+/*.loginWindow{
     position: fixed;
     width: 340px;
     height: 280px;
@@ -93,9 +85,34 @@ input[name=newProfile]{
     border-radius: 10PX;
     border: 1px solid #ccc;
     box-shadow: 0 10px 20px rgba(0,0,0,.1);
-    display: flex;
-    flex-direction: column;
+}*/
+h2{
+    letter-spacing: 2px;
+    font-variant-caps: all-petite-caps;
+    color: #476858;
+    font-size: 24px;
 }
+.loginWindowContents{
+    width: 340px;
+    height: 280px;
+    border-radius: 20PX;
+    border: 1px solid #ccc;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+    display: flex;
+    direction: column;
+    justify-content: center;
+
+}
+div.loginChild{
+    padding: 25px;
+}
+/* The Login page Styling {Login window; form inputs}
+.loginTitle{
+    text-align: center;
+    letter-spacing: 5px;
+    font-variant-caps: all-petite-caps;
+    font-size: 24px;
+}*/
 input[type=username]{
     padding-left: 10px;
 }
@@ -179,6 +196,9 @@ input[name=addAJob]{
      width: 70px;
  }
 
+
+
+
  .modal {
     display: none;
     position:fixed;
@@ -186,19 +206,19 @@ input[name=addAJob]{
     left: 50%;
     transform:translate(-50%,-50%);
     background: #fff;
-    width: 320px;
-    height: 320px;
+    width: 280px;
+    height: 280px;
     text-align: center;
     box-sizing:border-box;
     box-shadow:0 0 20px rgba(0,0,0,.2);
  }
  .visible {
-      display: block;
+    display: block;
     position:fixed;
     top: 50%;
     left: 50%;
     transform:translate(-50%,-50%);
-    background: #fff;
+    background:white;
     width: 320px;
     height: 320px;
     text-align: center;
@@ -207,7 +227,7 @@ input[name=addAJob]{
 }
 .modal__header {
     color:white;
-    background: #333;
+    background: none;
     line-height: 50px;
     text-align: center;
     position: relative;

@@ -1,10 +1,24 @@
 <?php
 include('config/init.php');
 verifyUser();
+echo $_SESSION['personId'];
+echo
+$job = getJob($_GET['jobId']);
 if(isset($_REQUEST['addAJob'])){
     header("Location: /addJob.php");
 }
+if(isset($_POST['saveJobInfo'])){
+    updateJobInfo($job['jobId'], $_POST['location'], $_POST['salary'], $_POST['res'], $_POST['skills']);
+    var_dump($job['jobId'], $_POST['location'], $_POST['salary'], $_POST['res'], $_POST['skills']);
+    //header("Location: /jobsForPerson.php?jobId=$job[jobId]");
+}
 
+if(isset($_POST['deleteJob'])){
+    softDeleteJob($job['jobId']);
+    echo"Go to jobs page and you will see that this job has been D E L E T E D";
+    header("Location: /jobsForPerson.php");
+
+}
 
 $jobs=getJobsForPerson($_SESSION['personId']);
 echoTaskHeader('Your Jobs List', 'Your Jobs List');
@@ -19,8 +33,9 @@ foreach($jobs as $index => $job){
                 <div class= 'modalHeader'>
                     <a href='#' class='js-close-modal'  onclick='closeModal($job[jobId])'>X</a>
                 </div>
-                <form action='' method = 'post'>$job[jobId]
-                    
+
+                <form action='' method = 'post'>
+                    <input type= 'hidden' name='jobId' value'".$job['jobId']."'/>
                     <input type= 'text' name='location' placeholder='location' value = '".$job['location']."'/>
                     <input type= 'text' name='salary' placeholder='salary' value = '".$job['salary']."'/>
                     <input type= 'text' name='res' placeholder='responsibilities' value = '".$job['res']."'/>
