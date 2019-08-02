@@ -1,49 +1,305 @@
+
+/*General Rules for Styling*/
 body{
-    background-color: white;
-    font-family: 'Courier New', Courier, monospace, sans-serif;
-    padding-left: 10px;
+    background-image: url("loginPlant.jpg");
+    width: 100%;
+    height: 100%;
 }
 
 h1{
     text-align: center;
     letter-spacing: 5px;
     font-variant-caps: all-petite-caps;
-
+    color: #476858;
+    font-size: 56px;
+    font-weight: 50;
 }
-.form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background-color: #006992;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-variant-caps: all-petite-caps;
-    font-size: 25px;
+.navbar{
+    text-align: center;
+    word-spacing: 50px;
 }
-
-.button{
-    color: #001D4A;
-}
-
 a{
-    color: #F1BC45;
+    color: #FBFBFB;
 }
 a:hover{
+    color: #020603;
+}
+form{
+    margin: 0auto;
+    margin-top: 20px;
+}
+label{
     color:black;
-    font-size: 150%;
+    display: inline-block;
+    margin-left: 18px;
+    padding-top:5px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    font-size: 18px;
+    font-weight: bolder;
 }
-.menu{
-    background-color: #27476E;
-    float: left;
-    word-spacing: 20px;
-}
+input{
+    float: right;
+    margin-right: 20px;
+    margin-top: 0px;
+    width: 200px;
+    height: 30px;
+     
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+    outline-style: groove;
+    color: #27476E;
+ }
+
+/* The register page Styling {the registration window; form inputs} */
 .register{
     background-color: #27476E;
     text-align: left;
 }
+.rpage{
+    position: fixed;
+    width: 340px;
+    height: 340px;
+    top:50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -170px;
+    background-color: none;
+    border-radius: 10PX;
+    border: 1px solid #ccc;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+}
+input[name=newProfile]{
+    width: 70px;
+ }
 
-.dropMenu{
-    display: none;
+/*.loginWindow{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -170px;
+}*/
+h2{
+    letter-spacing: 2px;
+    font-variant-caps: all-petite-caps;
+    color: #476858;
+    font-size: 24px;
+}
+.loginWindowContents{
+    width: 340px;
+    height: 280px;
+    border-radius: 20PX;
+    border: 1px solid #ccc;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+    display: flex;
+    direction: column;
+    justify-content: center;
+}
+div.loginChild{
+    padding: 25px;
+}
+input[type=username]{
+    padding-left: 10px;
+}
+input[type=password]{
+    padding-left: 10px;
 }
 
+/*Each user's page styling {List of Jobs; edit button; edit popup; docs button;
+    docs popup}*/
+.jobs{
+    font-size: 24px;
+    font-variant-caps: all-petite-caps;
+    color: white; 
+}
+
+.jobWrapper{
+    display: flex;
+    flex-direction: row;
+}
+input[name=addAJob]{
+    float: left;
+    width: 100px;
+}
+input[type=submit]{
+     width: 70px;
+}
+
+.modal {
+    display: none;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    background: none;
+    width: 280px;
+    height: 280px;
+    text-align: center;
+    box-sizing:border-box;
+    box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+.visible {
+    display: block;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    background:white;
+    width: 280px;
+    height: 200px;
+    text-align: center;
+    box-sizing:border-box;
+    box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+.modal__header {
+    color:white;
+    background: none;
+    line-height: 50px;
+    text-align: center;
+    position: relative;
+    height:50px;
+    box-sizing:border-box;
+} 
+
+.js-close-modal{
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    display: block;
+    padding: 0 20px;
+    font-size:16px;
+    background: none;
+    height: 100%;  
+}
+
+/*
+T R I A L
+
+*/
+.container {
+    background:#5C9C84;
+  border-radius: 5px;
+  box-shadow: 1 1.5px 1 1 rgba(0,0,0,0.1);
+  width:280px;
+  display: flex;  
+  flex-direction: column;
+}
+
+
+.logo{
+  font-family: "museo-slab";  
+  font-size:24px;
+  text-align: center;
+  padding: 20 1 1 1;
+  margin:0;
+}
+
+.login-item {
+    color: #5b5b5b;
+    padding:5px 5px 0;
+    margin: 10px 10px 0;	
+    border-radius: 3px;
+}
+.login-item-bottom {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   color: #5b5b5b;
+   padding:5px 5px 0;
+   margin: 10px 10px 0;	
+   border-radius: 3px;
+}
+
+input {
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.location:before, .salary:before, .res:before, .skills:before{
+  content: '\f007';
+  font: 14px fontawesome;
+    color: white;
+}
+
+.lock:before {
+  content: '\f023';
+  font: 14px fontawesome;
+    color: #5b5b5b;
+}
+
+.form input[type="number"], .form input[type="text"], .form input[type="submit"] {
+  width: 100%;
+}
+
+.form-login label,
+.form-login input[type="text"],
+.form-login input[type="number"],
+.form-login input[type="submit"] {
+  border-radius: 0.25rem;
+  padding: .5rem;
+  color: #334130;  
+}
+
+.form-login label {
+  background-color: #334130;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.form-login input[type="text"], .form-login input[type="number"] {
+  background-color: #DDDCE2;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.form-login input[type="text"]:focus, .form-login input[type="text"]:hover, .form-login input[type="number"]:focus, .form-login input[type="number"]:hover {
+  background-color: #eeeeee;
+}
+.form-login input[type="submit"] {
+  background-color: #334130;
+  color: #eee;
+  font-weight: bold;
+  text-transform: uppercase;
+ 
+  position: relative;
+}
+
+.form-field {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: .5rem;
+}
+.form-field-bottom{
+   width: 100px;
+}
+
+
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.text--center {
+  text-align: center;
+}
