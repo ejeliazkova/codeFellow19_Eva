@@ -1,0 +1,141 @@
+html {
+    height: 100%;
+ }
+ 
+ body {
+ /* Remember to use the other versions for IE 10 and older browsers! */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 100%;
+ font-family: 'lato', sans-serif;
+ color: white;
+ background: white;
+ }
+ 
+
+ .container {
+     background:#5C9C84;
+   border-radius: 5px;
+   box-shadow: 1 1.5px 1 1 rgba(0,0,0,0.1);
+   width:280px;
+   display: flex;  
+   flex-direction: column;
+ }
+
+ 
+ .logo{
+   font-family: "museo-slab";  
+   font-size:24px;
+   text-align: center;
+   padding: 20 1 1 1;
+   margin:0;
+ }
+ 
+ .login-item {
+     color: #5b5b5b;
+     padding:5px 5px 0;
+     margin: 10px 10px 0;	
+     border-radius: 3px;
+ }
+ .login-item-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #5b5b5b;
+    padding:5px 5px 0;
+    margin: 10px 10px 0;	
+    border-radius: 3px;
+}
+ 
+ input {
+   border: 0;
+   color: inherit;
+   font: inherit;
+   margin: 0;
+   outline: 0;
+   padding: 0;
+   -webkit-transition: background-color .3s;
+   transition: background-color .3s;
+ }
+ 
+ .location:before, .salary:before, .res:before, .skills:before{
+   content: '\f007';
+   font: 14px fontawesome;
+     color: white;
+ }
+ 
+ .lock:before {
+   content: '\f023';
+   font: 14px fontawesome;
+     color: #5b5b5b;
+ }
+ 
+ .form input[type="number"], .form input[type="text"], .form input[type="submit"] {
+   width: 100%;
+ }
+ 
+ .form-login label,
+ .form-login input[type="text"],
+ .form-login input[type="number"],
+ .form-login input[type="submit"] {
+   border-radius: 0.25rem;
+   padding: .5rem;
+   color: #334130;  
+ }
+ 
+ .form-login label {
+   background-color: #334130;
+   border-bottom-right-radius: 0;
+   border-top-right-radius: 0;
+   padding-left: 1rem;
+   padding-right: 1rem;
+ }
+ 
+ .form-login input[type="text"], .form-login input[type="number"] {
+   background-color: #DDDCE2;
+   border-bottom-left-radius: 0;
+   border-top-left-radius: 0;
+ }
+ .form-login input[type="text"]:focus, .form-login input[type="text"]:hover, .form-login input[type="number"]:focus, .form-login input[type="number"]:hover {
+   background-color: #eeeeee;
+ }
+ .form-login input[type="submit"] {
+   background-color: #334130;
+   color: #eee;
+   font-weight: bold;
+   text-transform: uppercase;
+  
+   position: relative;
+ }
+
+ .form-field {
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   display: flex;
+   margin-bottom: .5rem;
+ }
+ .form-field-bottom{
+    width: 100px;
+ }
+ 
+ 
+ .hidden {
+   border: 0;
+   clip: rect(0 0 0 0);
+   height: 1px;
+   margin: -1px;
+   overflow: hidden;
+   padding: 0;
+   position: absolute;
+   width: 1px;
+ }
+ 
+ .text--center {
+   text-align: center;
+ }
+ .plant{
+     height: 20%;
+     width: 20%;
+ }
