@@ -1,9 +1,11 @@
+
 /*General Rules for Styling*/
 body{
     background-image: url("loginPlant.jpg");
     width: 100%;
     height: 100%;
 }
+
 h1{
     text-align: center;
     letter-spacing: 5px;
@@ -113,6 +115,7 @@ input[type=password]{
     font-variant-caps: all-petite-caps;
     color: white; 
 }
+
 .jobWrapper{
     display: flex;
     flex-direction: row;

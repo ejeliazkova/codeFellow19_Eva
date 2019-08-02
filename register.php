@@ -3,7 +3,9 @@
     echoTaskHeader('Register', 'Register');
     
     if(isset($_REQUEST['newProfile'])){
+
         //$salt = bin2hex(random_bytes(32));
+
         insertPerson($_REQUEST['name'], $_REQUEST['about'], $_REQUEST['username'], sha1($_REQUEST['password']));
         echo"Go to the login page and sign in to see your profile!";
     }
