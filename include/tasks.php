@@ -9,13 +9,13 @@ function echoTaskHeader($pageTitle, $h1){
             </head>
             <body>
                 <h1>".$h1."</h1>
-                <div class='menu'>
+                
                     <div class='navbar'>
                       <a href='/logout.php'> LogOut </a>
                       <a href='/user.php'> Profile </a>
                       <a href='/jobsForPerson.php'> Jobs </a>
                     </div>
-                </div>
+                
             </body>
         
             <script>

@@ -75,16 +75,10 @@ input[name=newProfile]{
 
 /*.loginWindow{
     position: fixed;
-    width: 340px;
-    height: 280px;
     top:50%;
     left: 50%;
     margin-top: -200px;
     margin-left: -170px;
-    
-    border-radius: 10PX;
-    border: 1px solid #ccc;
-    box-shadow: 0 10px 20px rgba(0,0,0,.1);
 }*/
 h2{
     letter-spacing: 2px;
@@ -101,23 +95,15 @@ h2{
     display: flex;
     direction: column;
     justify-content: center;
-
 }
 div.loginChild{
     padding: 25px;
 }
-/* The Login page Styling {Login window; form inputs}
-.loginTitle{
-    text-align: center;
-    letter-spacing: 5px;
-    font-variant-caps: all-petite-caps;
-    font-size: 24px;
-}*/
 input[type=username]{
     padding-left: 10px;
 }
 input[type=password]{
-   padding-left: 10px;
+    padding-left: 10px;
 }
 
 /*Each user's page styling {List of Jobs; edit button; edit popup; docs button;
@@ -128,99 +114,39 @@ input[type=password]{
     color: white; 
 }
 .jobWrapper{
-   display: flex;
-   flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 input[name=addAJob]{
     float: left;
     width: 100px;
 }
-
-/* Popup container */
-.popup {
-    position: fixed;
-    
-    margin-top: 0px;
-    margin-left: 10px;
-    cursor: pointer;
-  }
-  
-  /* The actual popup (appears on top) */
-  .popup .popuptext {
-    visibility: hidden;
-    width: 250px;
-    height: 200px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 8px;
-    position: absolute;
-    z-index: 5;
-    bottom: 125%;
-    left: 50%;
-    margin-left: 50px;
-  }
-  
-  /* Popup arrow */
-  .popup .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
-  
-  /* Toggle this class when clicking on the popup container (hide and show the popup) */
-  .popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s
-  }
-  /* Add animation (fade in the popup) */
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
-
-
- input[type=submit]{
+input[type=submit]{
      width: 70px;
- }
+}
 
-
-
-
- .modal {
+.modal {
     display: none;
     position:fixed;
     top: 50%;
     left: 50%;
     transform:translate(-50%,-50%);
-    background: #fff;
+    background: none;
     width: 280px;
     height: 280px;
     text-align: center;
     box-sizing:border-box;
     box-shadow:0 0 20px rgba(0,0,0,.2);
- }
- .visible {
+}
+.visible {
     display: block;
     position:fixed;
     top: 50%;
     left: 50%;
     transform:translate(-50%,-50%);
     background:white;
-    width: 320px;
-    height: 320px;
+    width: 280px;
+    height: 200px;
     text-align: center;
     box-sizing:border-box;
     box-shadow:0 0 20px rgba(0,0,0,.2);
@@ -234,16 +160,143 @@ input[name=addAJob]{
     height:50px;
     box-sizing:border-box;
 } 
+
 .js-close-modal{
-  position: absolute;
-  top: 0;
-  right: 0;
-  text-decoration: none;
-  color:white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    display: block;
+    padding: 0 20px;
+    font-size:16px;
+    background: none;
+    height: 100%;  
+}
+
+/*
+T R I A L
+
+*/
+.container {
+    background:#5C9C84;
+  border-radius: 5px;
+  box-shadow: 1 1.5px 1 1 rgba(0,0,0,0.1);
+  width:280px;
+  display: flex;  
+  flex-direction: column;
+}
+
+
+.logo{
+  font-family: "museo-slab";  
+  font-size:24px;
+  text-align: center;
+  padding: 20 1 1 1;
+  margin:0;
+}
+
+.login-item {
+    color: #5b5b5b;
+    padding:5px 5px 0;
+    margin: 10px 10px 0;	
+    border-radius: 3px;
+}
+.login-item-bottom {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   color: #5b5b5b;
+   padding:5px 5px 0;
+   margin: 10px 10px 0;	
+   border-radius: 3px;
+}
+
+input {
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.location:before, .salary:before, .res:before, .skills:before{
+  content: '\f007';
+  font: 14px fontawesome;
+    color: white;
+}
+
+.lock:before {
+  content: '\f023';
+  font: 14px fontawesome;
+    color: #5b5b5b;
+}
+
+.form input[type="number"], .form input[type="text"], .form input[type="submit"] {
+  width: 100%;
+}
+
+.form-login label,
+.form-login input[type="text"],
+.form-login input[type="number"],
+.form-login input[type="submit"] {
+  border-radius: 0.25rem;
+  padding: .5rem;
+  color: #334130;  
+}
+
+.form-login label {
+  background-color: #334130;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.form-login input[type="text"], .form-login input[type="number"] {
+  background-color: #DDDCE2;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.form-login input[type="text"]:focus, .form-login input[type="text"]:hover, .form-login input[type="number"]:focus, .form-login input[type="number"]:hover {
+  background-color: #eeeeee;
+}
+.form-login input[type="submit"] {
+  background-color: #334130;
+  color: #eee;
   font-weight: bold;
-  display: block;
-  padding: 0 20px;
-  font-size:16px;
-  background: #555;
-  height: 100%;  
+  text-transform: uppercase;
+ 
+  position: relative;
+}
+
+.form-field {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: .5rem;
+}
+.form-field-bottom{
+   width: 100px;
+}
+
+
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.text--center {
+  text-align: center;
 }
